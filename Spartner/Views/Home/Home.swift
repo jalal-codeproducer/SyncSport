@@ -37,16 +37,33 @@ struct Home: View {
 
             Spacer()
 
-            Button(action: {
-                viewModel.startLocationUpdates()
-            }) {
-                Text("Start tracking")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 300, height: 60)
-                    .background(Color.black)
-                    .cornerRadius(20)
+            if viewModel.isRunning {
+                Button(action: {
+                    viewModel.stopLocationUpdates()
+                }) {
+                    Text("Stop tracking")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.black)
+                        .padding()
+                        .frame(width: 300, height: 60)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.black, lineWidth: 3)
+                        )
+                }
+            } else {
+                Button(action: {
+                    viewModel.startLocationUpdates()
+                }) {
+                    Text("Start tracking")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 300, height: 60)
+                        .background(Color.black)
+                        .cornerRadius(20)
+                }
             }
 
         }

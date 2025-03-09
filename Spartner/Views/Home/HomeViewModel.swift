@@ -13,6 +13,8 @@ final class HomeViewModel: ObservableObject {
     
     @Published var totalDistanceMoved: Double = 0.0
     @Published var lastKnownLocation: CLLocationCoordinate2D?
+    @Published var isRunning = false
+    
     private let locationManager: LocationManager
 
     init(locationManager: LocationManager) {
@@ -27,6 +29,12 @@ final class HomeViewModel: ObservableObject {
     
 
     func startLocationUpdates() {
-        locationManager.checkLocationAuthorization()
+        isRunning = true
+        locationManager.startTrackingUserLocation()
+    }
+
+    func stopLocationUpdates() {
+        isRunning = false
+        locationManager.stopTrackingUserLocation()
     }
 }
