@@ -31,6 +31,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
             beginLocationUpdates()
         
         @unknown default:
+            print("Unknown location authorization status")
         }
     }
     
