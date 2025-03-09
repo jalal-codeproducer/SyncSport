@@ -1,40 +1,41 @@
 //
-//  HomeViewModel.swift
+//  RunTrackerViewModel.swift
 //  Spartner
 //
 //  Created by Mohammed Jalal Alamer on 09.03.25.
 //
 
-import SwiftUI
+import Foundation
 import CoreLocation
 
 @MainActor
-final class HomeViewModel: ObservableObject {
-    
+final class RunTrackerViewModel: ObservableObject {
     @Published var totalDistanceMoved: Double = 0.0
     @Published var lastKnownLocation: CLLocationCoordinate2D?
     @Published var isRunning = false
+    @Published var presentCountDown = false
     
-    private let locationManager: LocationManager
+    private let trackManger: TrackManager
 
-    init(locationManager: LocationManager) {
-        self.locationManager = locationManager
+    init(trackManger: TrackManager) {
+        self.trackManger = trackManger
         
-        locationManager.$totalDistanceMoved
+        trackManger.$totalDistanceMoved
             .assign(to: &$totalDistanceMoved)
 
-        locationManager.$lastKnownLocation
+        trackManger.$lastKnownLocation
             .assign(to: &$lastKnownLocation)
     }
     
 
     func startLocationUpdates() {
+        presentCountDown.toggle()
         isRunning = true
-        locationManager.startTrackingUserLocation()
+        trackManger.startTrackingUserLocation()
     }
 
     func stopLocationUpdates() {
         isRunning = false
-        locationManager.stopTrackingUserLocation()
+        trackManger.stopTrackingUserLocation()
     }
 }

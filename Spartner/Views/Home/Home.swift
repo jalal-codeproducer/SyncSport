@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct Home: View {
-    @StateObject private var viewModel: HomeViewModel
     @EnvironmentObject var authManager: AuthManager
+    @EnvironmentObject var trackManger: TrackManager
 
-    init(locationManager: LocationManager) {
-        self._viewModel = StateObject(
-            wrappedValue: HomeViewModel(locationManager: locationManager))
-    }
+
 
     var body: some View {
         VStack(alignment: .center) {
@@ -25,46 +22,10 @@ struct Home: View {
                 .foregroundColor(.black)
                 .padding(.leading)
                 .padding(.bottom, 20)
-
-            Spacer()
-
-            Text(
-                "\(String(format: "%.2f", viewModel.totalDistanceMoved / 1000)) KM"
-            )
-            .font(.system(size: 60, weight: .semibold, design: .monospaced))
-            .foregroundColor(.black)
-            .padding()
-
-            Spacer()
-
-            if viewModel.isRunning {
-                Button(action: {
-                    viewModel.stopLocationUpdates()
-                }) {
-                    Text("Stop tracking")
-                        .font(.headline)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.black)
-                        .padding()
-                        .frame(width: 300, height: 60)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(.black, lineWidth: 3)
-                        )
-                }
-            } else {
-                Button(action: {
-                    viewModel.startLocationUpdates()
-                }) {
-                    Text("Start tracking")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(width: 300, height: 60)
-                        .background(Color.black)
-                        .cornerRadius(20)
-                }
-            }
+                         
+                         
+            RunTrackerView(trackManger: trackManger)
+           
 
         }
         .background(Color.white)
@@ -72,6 +33,7 @@ struct Home: View {
 }
 
 #Preview {
-    Home(locationManager: LocationManager())
+    Home()
         .environmentObject(AuthManager())
+        .environmentObject(TrackManager())
 }

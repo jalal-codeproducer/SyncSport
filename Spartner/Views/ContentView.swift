@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var authManager: AuthManager
-    @EnvironmentObject var locationManager: LocationManager
+    @EnvironmentObject var trackManager: TrackManager
     @State private var isRegistering = false
     @State private var isAuthenticated = false
 
     var body: some View {
         NavigationStack {
             if !isAuthenticated {
-                Home(locationManager: locationManager)
+                Home()
             } else {
                 if isRegistering {
                     RegisterView(
