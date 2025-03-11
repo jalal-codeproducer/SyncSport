@@ -40,6 +40,7 @@ final class TrackManager: NSObject, ObservableObject, CLLocationManagerDelegate
     private func beginLocationUpdates() {
         manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         manager.distanceFilter = 10
+        manager.pausesLocationUpdatesAutomatically = false
         manager.startUpdatingLocation()
     }
 

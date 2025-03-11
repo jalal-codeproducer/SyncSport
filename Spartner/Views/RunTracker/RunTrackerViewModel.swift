@@ -5,37 +5,43 @@
 //  Created by Mohammed Jalal Alamer on 09.03.25.
 //
 
-import Foundation
 import CoreLocation
+import Foundation
 
 @MainActor
 final class RunTrackerViewModel: ObservableObject {
+    @Published var trackingStatus: TrackingStatus = .initial
     @Published var totalDistanceMoved: Double = 0.0
-    @Published var lastKnownLocation: CLLocationCoordinate2D?
-    @Published var isRunning = false
     @Published var presentCountDown = false
-    
+
     private let trackManger: TrackManager
 
     init(trackManger: TrackManager) {
         self.trackManger = trackManger
-        
+
         trackManger.$totalDistanceMoved
             .assign(to: &$totalDistanceMoved)
-
-        trackManger.$lastKnownLocation
-            .assign(to: &$lastKnownLocation)
     }
-    
+
+    func activateCountDown() {
+        presentCountDown = true
+    }
 
     func startLocationUpdates() {
-        presentCountDown.toggle()
-        isRunning = true
+        presentCountDown = false
         trackManger.startTrackingUserLocation()
+        trackingStatus = .running
     }
 
     func stopLocationUpdates() {
-        isRunning = false
         trackManger.stopTrackingUserLocation()
+        trackingStatus = .done
     }
+}
+
+enum TrackingStatus {
+    case
+        initial,
+        running,
+        done
 }

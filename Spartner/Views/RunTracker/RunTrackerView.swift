@@ -17,47 +17,85 @@ struct RunTrackerView: View {
 
     var body: some View {
         VStack {
-            Spacer()
+                switch viewModel.trackingStatus {
+                case .initial:
+                    Spacer()
 
-            Text(
-                "\(String(format: "%.2f", viewModel.totalDistanceMoved / 1000)) KM"
-            )
-            .font(.system(size: 60, weight: .semibold, design: .monospaced))
-            .foregroundColor(.black)
-            .padding()
+                    Button(action: {
+                        viewModel.activateCountDown()
+                    }) {
+                        Text("Start tracking")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .frame(width: 250, height: 250)
+                            .background(Color.black)
+                            .clipShape(Circle())
+                            .shadow(radius: 5)
+                    }
 
-            Spacer()
+                    Spacer()
+                case .running:
+                    Spacer()
+                    Text(
+                        "\(String(format: "%.2f", viewModel.totalDistanceMoved / 1000)) KM"
+                    )
+                    .font(
+                        .system(
+                            size: 60, weight: .semibold, design: .monospaced)
+                    )
+                    .foregroundColor(.black)
+                    .padding()
 
-            if viewModel.isRunning {
-                Button(action: {
-                    viewModel.stopLocationUpdates()
-                }) {
-                    Text("Stop tracking")
-                        .font(.headline)
+                    Spacer()
+
+                    Button(action: {
+                        viewModel.stopLocationUpdates()
+                    }) {
+                        Text("Stop tracking")
+                            .font(.headline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.black)
+                            .padding()
+                            .frame(width: 300, height: 60)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.black, lineWidth: 3)
+                            )
+                    }
+                case .done:
+                    Spacer()
+                    Image("finish")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height: 150)
+                    
+                    Text("Great Job!")
+                        .font(.system(size: 50))
+                        .fontWeight(.heavy)
+                        .foregroundStyle(.black)
+                    
+                    Text("You've completed your run")
                         .fontWeight(.semibold)
-                        .foregroundColor(.black)
-                        .padding()
-                        .frame(width: 300, height: 60)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(.black, lineWidth: 3)
-                        )
-                }
-            } else {
-                Button(action: {
-                    viewModel.startLocationUpdates()
-                }) {
-                    Text("Start tracking")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(width: 300, height: 60)
-                        .background(Color.black)
-                        .cornerRadius(20)
-                }
-            }
+                        .foregroundStyle(.black)
 
-        }.fullScreenCover(isPresented: $viewModel.presentCountDown) {
+                    
+                    Text(
+                        "\(String(format: "%.2f", viewModel.totalDistanceMoved / 1000)) KM"
+                    )
+                    .font(
+                        .system(
+                            size: 45, weight: .semibold, design: .monospaced)
+                    )
+                    .foregroundColor(.black)
+                    .padding()
+                    
+                    Spacer()
+
+                }
+
+        }
+        .fullScreenCover(isPresented: $viewModel.presentCountDown) {
             CountDownView().environmentObject(viewModel)
         }
     }

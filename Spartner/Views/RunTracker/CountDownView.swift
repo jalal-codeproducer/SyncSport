@@ -32,7 +32,7 @@ struct CountDownView: View {
                 if countDown <= 1 {
                     timer?.invalidate()
                     timer = nil
-                    viewModel.presentCountDown = false
+                    viewModel.startLocationUpdates()
                 } else {
                     countDown -= 1
                 }
