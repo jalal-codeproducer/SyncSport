@@ -31,7 +31,6 @@ struct SpartnerApp: App {
             ContentView()
                 .environmentObject(authManager)
                 .environmentObject(trackManager)
-          
         }
     }
 }

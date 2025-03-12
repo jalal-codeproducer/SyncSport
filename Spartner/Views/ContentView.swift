@@ -12,22 +12,27 @@ struct ContentView: View {
     @EnvironmentObject var trackManager: TrackManager
     @State private var isRegistering = false
     @State private var isAuthenticated = false
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
 
     var body: some View {
         NavigationStack {
-            if !isAuthenticated {
-                Home()
+            if !hasSeenOnboarding {
+                OnBoardingView()
             } else {
-                if isRegistering {
-                    RegisterView(
-                        isRegistering: $isRegistering,
-                        isAuthenticated: $isAuthenticated,
-                        authManager: authManager)
+                if !isAuthenticated {
+                    Home()
                 } else {
-                    LoginView(
-                        isRegistering: $isRegistering,
-                        isAuthenticated: $isAuthenticated,
-                        authManager: authManager)
+                    if isRegistering {
+                        RegisterView(
+                            isRegistering: $isRegistering,
+                            isAuthenticated: $isAuthenticated,
+                            authManager: authManager)
+                    } else {
+                        LoginView(
+                            isRegistering: $isRegistering,
+                            isAuthenticated: $isAuthenticated,
+                            authManager: authManager)
+                    }
                 }
             }
         }
