@@ -49,7 +49,7 @@ struct RegisterView: View {
                         .padding(10)
                 } else {
                     Spacer()
-                        .frame(height: 20)
+                        .frame(height: 30)
                 }
 
                 if !viewModel.isLoading {

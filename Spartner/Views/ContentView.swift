@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var authManager: AuthManager
     @EnvironmentObject var trackManager: TrackManager
+    @State private var selectedIndex: Int = 0
     @State private var isRegistering = false
     @State private var isAuthenticated = false
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
@@ -19,9 +20,27 @@ struct ContentView: View {
             if !hasSeenOnboarding {
                 OnBoardingView()
             } else {
-                if !isAuthenticated {
-                    Home()
-                } else {
+                if isAuthenticated {
+                    TabView(selection: $selectedIndex) {
+                        NavigationStack {
+                            Dashboard()
+                        }
+                        .tabItem {
+                            Text("Dashboard")
+                            Image(systemName: "flag.checkered.circle.fill")
+                                .renderingMode(.template)
+                        }
+                        .tag(0)
+
+                        NavigationStack {
+                            Text("Profile view")
+                        }
+                        .tabItem {
+                            Label("Profile", systemImage: "person.crop.circle.fill")
+                        }
+                        .tag(1)
+
+                    }                } else {
                     if isRegistering {
                         RegisterView(
                             isRegistering: $isRegistering,

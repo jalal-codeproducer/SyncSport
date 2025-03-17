@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Home: View {
+struct Dashboard: View {
     @EnvironmentObject var authManager: AuthManager
     @EnvironmentObject var trackManger: TrackManager
 
@@ -33,7 +33,7 @@ struct Home: View {
 }
 
 #Preview {
-    Home()
+    Dashboard()
         .environmentObject(AuthManager())
         .environmentObject(TrackManager())
 }

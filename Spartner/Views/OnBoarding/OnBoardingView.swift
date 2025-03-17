@@ -30,7 +30,18 @@ struct OnBoardingView: View {
                 TabView(selection: $currentIndex) {
                     ForEach(0..<onBoardingContent.count, id: \.self) { index in
                         OnBoardingPage(
-                            onBoardingContent: onBoardingContent[index]
+                            onBoardingContent: onBoardingContent[index],
+                            lastPage: Binding(
+                                get: { currentIndex == (onBoardingContent.count - 1) },
+                                set: { _ in }
+                            ),
+                            onNext: {
+                                if (currentIndex == onBoardingContent.count - 1){
+                                    hasSeenOnboarding = true
+                                } else {
+                                    currentIndex += 1
+                                }
+                            }
                         )
                         .tag(index)
                     }
@@ -39,39 +50,12 @@ struct OnBoardingView: View {
                 .background(.white)
                 .ignoresSafeArea()
 
-                // Skip Button or Next Button
-                HStack {
-                    Spacer()
-
-                    if currentIndex == onBoardingContent.count - 1 {
-                        Button(action: {
-                            hasSeenOnboarding = true
-                        }) {
-                            Text("Get Started")
-                                .fontWeight(.bold)
-                        }
-                        .padding()
-                    } else {
-                        Button(action: {
-                            currentIndex += 1
-                        }) {
-                            Text("Next")
-                        }
-                        .padding()
-                    }
-                }.background(.white)
             }
             .onAppear {
                 if hasSeenOnboarding {
                     // Skip onboarding if already seen
                     navigateToMainScreen()
                 }
-            }
-        }
-        .onChange(of: currentIndex) { newIndex in
-            // If it's the last onboarding page, show the "Get Started" button
-            if newIndex == onBoardingContent.count - 1 {
-                hasSeenOnboarding = true
             }
         }
     }

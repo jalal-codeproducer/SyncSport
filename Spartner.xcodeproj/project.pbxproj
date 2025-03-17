@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		051373B32D77AD1700494EB3 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 051373B22D77AD1700494EB3 /* FirebaseCore */; };
 		051373B72D77B1EC00494EB3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 051373B62D77B1EC00494EB3 /* FirebaseAuth */; };
+		0597BBAF2D88DD6600179B33 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0597BBAE2D88DD6600179B33 /* FirebaseFirestore */; };
 		05A66B9A2D81082400F98FE5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 05A66B992D81082400F98FE5 /* Lottie */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				051373B32D77AD1700494EB3 /* FirebaseCore in Frameworks */,
+				0597BBAF2D88DD6600179B33 /* FirebaseFirestore in Frameworks */,
 				051373B72D77B1EC00494EB3 /* FirebaseAuth in Frameworks */,
 				05A66B9A2D81082400F98FE5 /* Lottie in Frameworks */,
 			);
@@ -132,6 +134,7 @@
 				051373B22D77AD1700494EB3 /* FirebaseCore */,
 				051373B62D77B1EC00494EB3 /* FirebaseAuth */,
 				05A66B992D81082400F98FE5 /* Lottie */,
+				0597BBAE2D88DD6600179B33 /* FirebaseFirestore */,
 			);
 			productName = Spartner;
 			productReference = 05C4AD472D73D4E6008BA2BE /* Spartner.app */;
@@ -610,6 +613,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 051373B02D77AB1C00494EB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		0597BBAE2D88DD6600179B33 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 051373B02D77AB1C00494EB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 		05A66B992D81082400F98FE5 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
