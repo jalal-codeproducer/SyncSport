@@ -22,14 +22,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct SpartnerApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject private var authManager = AuthManager()
     @StateObject private var trackManager = TrackManager()
 
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(authManager)
                 .environmentObject(trackManager)
         }
     }

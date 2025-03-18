@@ -8,6 +8,7 @@
 protocol AuthUseCase {
     func login(email: String, password: String) async throws -> SportUser
     func register(email: String, password: String, name: String) async throws -> SportUser
+    func loginAnonyomously() async throws -> SportUser
     func logout() throws
     func getCurrentUser() -> SportUser?
 }
@@ -25,6 +26,10 @@ class AuthUseCaseImpl: AuthUseCase {
 
     func register(email: String, password: String, name: String) async throws -> SportUser {
         return try await repository.register(email: email, password: password, name: name)
+    }
+    
+    func loginAnonyomously() async throws -> SportUser {
+        return try await repository.loginAnonyomously()
     }
 
     func logout() throws {

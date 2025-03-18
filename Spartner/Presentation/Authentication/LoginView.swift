@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject private var viewModel: LoginViewModel
+    @StateObject private var viewModel = DependencyInjection.shared
+        .provideAuthViewModel()
+    @State private var email = ""
+    @State private var password = ""
 
     @Binding var isRegistering: Bool
     @Binding var isAuthenticated: Bool
 
     init(
-        isRegistering: Binding<Bool>, isAuthenticated: Binding<Bool>,
-        authManager: AuthManager
+        isRegistering: Binding<Bool>, isAuthenticated: Binding<Bool>
     ) {
         self._isRegistering = isRegistering
         self._isAuthenticated = isAuthenticated
-        self._viewModel = StateObject(
-            wrappedValue: LoginViewModel(authManager: authManager))
     }
 
     var body: some View {
@@ -30,9 +30,9 @@ struct LoginView: View {
             VStack {
                 AuthenticationHeader(text: "Welcome Back")
 
-                EmailInputView(email: $viewModel.email)
+                EmailInputView(email: $email)
                 PasswordInputView(
-                    password: $viewModel.password, placeholder: "Password")
+                    password: $password, placeholder: "Password")
 
                 if viewModel.errorMessage != nil {
                     Text(viewModel.errorMessage!)
@@ -47,7 +47,8 @@ struct LoginView: View {
                 Button(action: {
                     Task {
                         if !viewModel.isLoading {
-                            isAuthenticated = await viewModel.signIn()
+                            isAuthenticated = await viewModel.login(
+                                email: email, password: password)
                         }
                     }
                 }) {
@@ -59,7 +60,7 @@ struct LoginView: View {
                 }.padding(.bottom, 20)
 
                 Button("Don't have an account? Register!") {
-                    if(!viewModel.isLoading){
+                    if !viewModel.isLoading {
                         isRegistering = true
                     }
                 }
@@ -80,9 +81,7 @@ struct LoginView: View {
         var body: some View {
             LoginView(
                 isRegistering: $isRegistering,
-                isAuthenticated: $isAuthenticated,
-                authManager: AuthManager()
-            )
+                isAuthenticated: $isAuthenticated)
         }
     }
 

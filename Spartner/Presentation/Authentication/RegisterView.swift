@@ -10,18 +10,21 @@ import FirebaseCore
 import SwiftUI
 
 struct RegisterView: View {
-    @StateObject private var viewModel: RegisterViewModel
+    @StateObject private var vm = DependencyInjection.shared
+        .provideAuthViewModel()
+    @State private var username = ""
+    @State private var email = ""
+    @State private var password = ""
+    @State private var repeatPassword = ""
+
     @Binding var isRegistering: Bool
     @Binding var isAuthenticated: Bool
 
     init(
-        isRegistering: Binding<Bool>, isAuthenticated: Binding<Bool>,
-        authManager: AuthManager
+        isRegistering: Binding<Bool>, isAuthenticated: Binding<Bool>
     ) {
         self._isRegistering = isRegistering
         self._isAuthenticated = isAuthenticated
-        self._viewModel = StateObject(
-            wrappedValue: RegisterViewModel(authManager: authManager))
     }
 
     var body: some View {
@@ -31,18 +34,18 @@ struct RegisterView: View {
             VStack {
                 AuthenticationHeader(text: "Sing up")
 
-                UsernameInputView(username: $viewModel.displayname)
-                EmailInputView(email: $viewModel.email)
+                UsernameInputView(username: $username)
+                EmailInputView(email: $email)
                 PasswordInputView(
-                    password: $viewModel.password, placeholder: "Password"
+                    password: $password, placeholder: "Password"
                 )
                 .padding(.bottom, 20)
                 PasswordInputView(
-                    password: $viewModel.repeatPassword,
+                    password: $repeatPassword,
                     placeholder: "Repeat password")
 
-                if viewModel.errorMessage != nil {
-                    Text(viewModel.errorMessage!)
+                if vm.errorMessage != nil {
+                    Text(vm.errorMessage!)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.footnote)
                         .foregroundColor(.red)
@@ -52,11 +55,15 @@ struct RegisterView: View {
                         .frame(height: 30)
                 }
 
-                if !viewModel.isLoading {
+                if !vm.isLoading {
                     Button(action: {
                         Task {
-                            if !viewModel.isLoading {
-                                isAuthenticated = await viewModel.register()
+                            if !vm.isLoading {
+                                isAuthenticated = await vm.register(
+                                    email: email,
+                                    password: password,
+                                    repeatPassword: repeatPassword,
+                                    name: username)
                             }
                         }
                     }) {
@@ -72,10 +79,8 @@ struct RegisterView: View {
 
                     Button(action: {
                         Task {
-                            if !viewModel.isLoading {
-                                isAuthenticated =
-                                    await viewModel.singInAnonymously()
-
+                            if !vm.isLoading {
+                                isAuthenticated = await vm.loginAnonymously()
                             }
                         }
                     }) {
@@ -86,7 +91,7 @@ struct RegisterView: View {
                 }
 
                 Button("Already have an account? Login!") {
-                    if !viewModel.isLoading {
+                    if !vm.isLoading {
                         isRegistering = false
                     }
                 }
@@ -108,8 +113,7 @@ struct RegisterView: View {
         var body: some View {
             RegisterView(
                 isRegistering: $isRegistering,
-                isAuthenticated: $isAuthenticated,
-                authManager: AuthManager()
+                isAuthenticated: $isAuthenticated
             )
         }
     }

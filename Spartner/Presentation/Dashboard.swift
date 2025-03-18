@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct Dashboard: View {
-    @EnvironmentObject var authManager: AuthManager
+    @StateObject private var viewModel = DependencyInjection.shared
+        .provideAuthViewModel()
+    
     @EnvironmentObject var trackManger: TrackManager
-
-
 
     var body: some View {
         VStack(alignment: .center) {
-            Text("Hey, \(authManager.user?.displayName ?? "User")!")
+            Text("Hey, \(viewModel.user?.name ?? "User")!")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.title)
                 .fontWeight(.semibold)
@@ -34,6 +34,5 @@ struct Dashboard: View {
 
 #Preview {
     Dashboard()
-        .environmentObject(AuthManager())
         .environmentObject(TrackManager())
 }

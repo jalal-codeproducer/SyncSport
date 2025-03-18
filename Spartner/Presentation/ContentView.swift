@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var authManager: AuthManager
     @EnvironmentObject var trackManager: TrackManager
     @State private var selectedIndex: Int = 0
     @State private var isRegistering = false
@@ -36,21 +35,24 @@ struct ContentView: View {
                             Text("Profile view")
                         }
                         .tabItem {
-                            Label("Profile", systemImage: "person.crop.circle.fill")
+                            Label(
+                                "Profile",
+                                systemImage: "person.crop.circle.fill")
                         }
                         .tag(1)
 
-                    }                } else {
+                    }
+                } else {
                     if isRegistering {
                         RegisterView(
                             isRegistering: $isRegistering,
-                            isAuthenticated: $isAuthenticated,
-                            authManager: authManager)
+                            isAuthenticated: $isAuthenticated
+                        )
                     } else {
                         LoginView(
                             isRegistering: $isRegistering,
-                            isAuthenticated: $isAuthenticated,
-                            authManager: authManager)
+                            isAuthenticated: $isAuthenticated
+                        )
                     }
                 }
             }
