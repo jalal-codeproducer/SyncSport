@@ -5,9 +5,8 @@
 //  Created by Mohammed Jalal Alamer on 18.03.25.
 //
 
-
-import Foundation
 import Combine
+import Foundation
 
 @MainActor
 class ChallengeViewModel: ObservableObject {
@@ -20,6 +19,16 @@ class ChallengeViewModel: ObservableObject {
 
     init(useCase: ChallengeUseCase) {
         self.useCase = useCase
+    }
+
+    func createChallenges() {
+        Task {
+            do {
+                try await useCase.createChallenges()
+            } catch {
+                errorMessage = error.localizedDescription
+            }
+        }
     }
 
     func fetchChallenges() {
@@ -45,7 +54,9 @@ class ChallengeViewModel: ObservableObject {
     func completeChallenge(challengeId: String) {
         Task {
             do {
-                if let challenge = challenges.first(where: { $0.id == challengeId }) {
+                if let challenge = challenges.first(where: {
+                    $0.id == challengeId
+                }) {
                     try await useCase.completeChallenge(challenge)
 
                     DispatchQueue.main.async {

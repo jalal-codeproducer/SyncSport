@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 @MainActor
 class AuthViewModel: ObservableObject {
+    @Published var isLoggedIn = false
     @Published var user: SportUser?
     @Published var isLoading = false
     @Published var errorMessage: String?
@@ -16,7 +18,7 @@ class AuthViewModel: ObservableObject {
 
     init(useCase: AuthUseCase) {
         self.useCase = useCase
-        self.user = useCase.getCurrentUser()
+        checkAuthState()
     }
 
     func login(email: String, password: String) async -> Bool {
@@ -44,10 +46,8 @@ class AuthViewModel: ObservableObject {
 
     func register(
         email: String, password: String, repeatPassword: String, name: String
-    ) async -> Bool {
+    ) async {
         isLoading = true
-        var isSuccess = false
-
         defer {
             isLoading = false
         }
@@ -58,29 +58,27 @@ class AuthViewModel: ObservableObject {
                     email: email, password: password,
                     repeatPassword: repeatPassword)
             else {
-                return false
+                return
             }
             self.user = try await useCase.register(
                 email: email, password: password, name: name)
-            isSuccess = true
+            isLoggedIn = true
         } catch {
             errorMessage = error.localizedDescription
         }
-
-        return isSuccess
     }
 
-    func loginAnonymously() async -> Bool {
+    func loginAnonymously() async {
         isLoading = true
         defer {
             isLoading = false
         }
+        
         do {
-            let user = try await useCase.loginAnonyomously()
-            return true
+            self.user = try await useCase.loginAnonyomously()
+            isLoggedIn = true
         } catch {
             errorMessage = error.localizedDescription
-            return false
         }
     }
 
@@ -90,6 +88,14 @@ class AuthViewModel: ObservableObject {
             self.user = nil
         } catch {
             print("Logout error:", error)
+        }
+    }
+
+    func checkAuthState() {
+        let user = useCase.getCurrentUser()
+        if user != nil {
+            self.user = user
+            isLoggedIn = true
         }
     }
 

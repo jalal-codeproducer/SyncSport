@@ -10,21 +10,19 @@ import FirebaseCore
 import SwiftUI
 
 struct RegisterView: View {
-    @StateObject private var vm = DependencyInjection.shared
-        .provideAuthViewModel()
+    @EnvironmentObject var viewModel: AuthViewModel
+
     @State private var username = ""
     @State private var email = ""
     @State private var password = ""
     @State private var repeatPassword = ""
 
     @Binding var isRegistering: Bool
-    @Binding var isAuthenticated: Bool
 
     init(
-        isRegistering: Binding<Bool>, isAuthenticated: Binding<Bool>
+        isRegistering: Binding<Bool>
     ) {
         self._isRegistering = isRegistering
-        self._isAuthenticated = isAuthenticated
     }
 
     var body: some View {
@@ -44,8 +42,8 @@ struct RegisterView: View {
                     password: $repeatPassword,
                     placeholder: "Repeat password")
 
-                if vm.errorMessage != nil {
-                    Text(vm.errorMessage!)
+                if viewModel.errorMessage != nil {
+                    Text(viewModel.errorMessage!)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.footnote)
                         .foregroundColor(.red)
@@ -55,11 +53,11 @@ struct RegisterView: View {
                         .frame(height: 30)
                 }
 
-                if !vm.isLoading {
+                if !viewModel.isLoading {
                     Button(action: {
                         Task {
-                            if !vm.isLoading {
-                                isAuthenticated = await vm.register(
+                            if !viewModel.isLoading {
+                                await viewModel.register(
                                     email: email,
                                     password: password,
                                     repeatPassword: repeatPassword,
@@ -79,8 +77,8 @@ struct RegisterView: View {
 
                     Button(action: {
                         Task {
-                            if !vm.isLoading {
-                                isAuthenticated = await vm.loginAnonymously()
+                            if !viewModel.isLoading {
+                                await viewModel.loginAnonymously()
                             }
                         }
                     }) {
@@ -91,7 +89,7 @@ struct RegisterView: View {
                 }
 
                 Button("Already have an account? Login!") {
-                    if !vm.isLoading {
+                    if !viewModel.isLoading {
                         isRegistering = false
                     }
                 }
@@ -112,9 +110,7 @@ struct RegisterView: View {
 
         var body: some View {
             RegisterView(
-                isRegistering: $isRegistering,
-                isAuthenticated: $isAuthenticated
-            )
+                isRegistering: $isRegistering)
         }
     }
 

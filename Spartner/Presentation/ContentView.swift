@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
     @EnvironmentObject var trackManager: TrackManager
+
+    var challengeViewModel = DependencyInjection.shared
+        .provideChallengeViewModel()
     @State private var selectedIndex: Int = 0
     @State private var isRegistering = false
     @State private var isAuthenticated = false
@@ -19,7 +23,7 @@ struct ContentView: View {
             if !hasSeenOnboarding {
                 OnBoardingView()
             } else {
-                if isAuthenticated {
+                if authViewModel.isLoggedIn {
                     TabView(selection: $selectedIndex) {
                         NavigationStack {
                             Dashboard()
@@ -45,9 +49,8 @@ struct ContentView: View {
                 } else {
                     if isRegistering {
                         RegisterView(
-                            isRegistering: $isRegistering,
-                            isAuthenticated: $isAuthenticated
-                        )
+                            isRegistering: $isRegistering
+                        ).environmentObject(authViewModel)
                     } else {
                         LoginView(
                             isRegistering: $isRegistering,

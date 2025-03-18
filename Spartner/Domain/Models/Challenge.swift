@@ -11,7 +11,7 @@ struct Challenge: Identifiable, Codable {
     var id: String = UUID().uuidString 
     var title: String
     var description: String?
-    var target: String
+    var target: Double
     var level: ChallengeLevel
     var points: Int
     var status: ChallengeStatus
@@ -35,7 +35,7 @@ struct Challenge: Identifiable, Codable {
     static func fromDictionary(_ dict: [String: Any]) -> Challenge? {
         guard let id = dict["id"] as? String,
               let title = dict["title"] as? String,
-              let target = dict["target"] as? String,
+              let target = dict["target"] as? Double,
               let levelRaw = dict["level"] as? String,
               let level = ChallengeLevel(rawValue: levelRaw),
               let points = dict["points"] as? Int,

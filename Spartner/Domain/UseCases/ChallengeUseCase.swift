@@ -6,6 +6,7 @@
 //
 
 protocol ChallengeUseCase {
+    func createChallenges() async throws
     func fetchChallenges() async throws -> [Challenge]
     func completeChallenge(_ challenge: Challenge) async throws
 }
@@ -16,6 +17,10 @@ class ChallengeUseCaseImpl: ChallengeUseCase {
 
     init(repository: ChallengeRepository) {
         self.repository = repository
+    }
+    
+    func createChallenges() async throws {
+        try await repository.createChallenges()
     }
 
     func fetchChallenges() async throws -> [Challenge] {
