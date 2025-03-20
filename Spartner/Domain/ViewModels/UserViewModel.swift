@@ -5,30 +5,32 @@
 //  Created by Mohammed Jalal Alamer on 18.03.25.
 //
 
-
+import SwiftUI
 import Foundation
 import Combine
 
 @MainActor
 class UserViewModel: ObservableObject {
-    private let useCase: UserUseCase
+    @AppStorage("userId") var userId: String = ""
+
+    private let repository: SportUserRepositoryImpl
     private var cancellables = Set<AnyCancellable>()
 
     @Published var user: SportUser?
     @Published var isLoading = false
     @Published var errorMessage: String?
 
-    init(useCase: UserUseCase) {
-        self.useCase = useCase
+    init(repository: SportUserRepositoryImpl) {
+        self.repository = repository
     }
 
-    func fetchUser(userId: String) {
+    func fetchUser() {
         isLoading = true
         errorMessage = nil
 
         Task {
             do {
-                let fetchedUser = try await useCase.getUser(byId: userId)
+                let fetchedUser = try await repository.getUser(byId: userId)
                 DispatchQueue.main.async {
                     self.user = fetchedUser
                     self.isLoading = false
@@ -49,7 +51,7 @@ class UserViewModel: ObservableObject {
 
         Task {
             do {
-                try await useCase.updateUser(currentUser)
+                try await repository.updateUser(currentUser)
                 DispatchQueue.main.async {
                     self.user = currentUser
                 }
@@ -66,7 +68,7 @@ class UserViewModel: ObservableObject {
 
         Task {
             do {
-                try await useCase.addPointsToUser(userId: userId, points: points)
+                try await repository.updateUserPoints(userId: userId, points: points)
                 DispatchQueue.main.async {
                     self.user?.points += points
                 }

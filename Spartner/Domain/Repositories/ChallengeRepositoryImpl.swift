@@ -1,5 +1,5 @@
 //
-//  FirestoreChallengeDataSource.swift
+//  Implementation.swift
 //  Spartner
 //
 //  Created by Mohammed Jalal Alamer on 17.03.25.
@@ -7,7 +7,14 @@
 
 import FirebaseFirestore
 
-class FirestoreChallengeDataSource {
+protocol ChallengeRepository {
+    func createChallenges() async throws
+    func getChallenges() async throws -> [Challenge]
+    func updateChallengeStatus(_ challenge: Challenge, status: ChallengeStatus)
+        async throws
+}
+
+class ChallengeRepositoryImpl: ChallengeRepository {
     private let db = Firestore.firestore()
 
     func createChallenges() async throws {
@@ -124,7 +131,7 @@ class FirestoreChallengeDataSource {
         }
     }
 
-    func fetchChallenges() async throws -> [Challenge] {
+    func getChallenges() async throws -> [Challenge] {
         let snapshot = try await db.collection("challenges").getDocuments()
         return snapshot.documents.compactMap {
             Challenge.fromDictionary($0.data())

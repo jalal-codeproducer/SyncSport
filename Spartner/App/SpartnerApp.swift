@@ -22,14 +22,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct SpartnerApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var authViewModel = DependencyInjection.shared.provideAuthViewModel()
     @StateObject private var trackManager = TrackManager()
 
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(authViewModel)
                 .environmentObject(trackManager)
         }
     }

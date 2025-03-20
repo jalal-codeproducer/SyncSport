@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var authViewModel: AuthViewModel
     @EnvironmentObject var trackManager: TrackManager
-
+    @StateObject private var authViewModel = DependencyInjection.shared.provideAuthViewModel()
     var challengeViewModel = DependencyInjection.shared
         .provideChallengeViewModel()
     @State private var selectedIndex: Int = 0
@@ -50,7 +49,7 @@ struct ContentView: View {
                     if isRegistering {
                         RegisterView(
                             isRegistering: $isRegistering
-                        ).environmentObject(authViewModel)
+                        )
                     } else {
                         LoginView(
                             isRegistering: $isRegistering,

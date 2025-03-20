@@ -35,18 +35,6 @@ struct RunTrackerView: View {
                             .shadow(radius: 5)
                     }
 
-                    Button(action: {
-                        authViewModel.logout()
-                    }) {
-                        Text("Log out")
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .frame(width: 120, height: 100)
-                            .background(Color.black)
-                            .shadow(radius: 5)
-                    }
-
                     Spacer()
                 case .running:
                     Spacer()

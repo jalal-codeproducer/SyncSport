@@ -1,5 +1,5 @@
 //
-//  FirebaseAuthDataSource.swift
+//  Implementation.swift
 //  Spartner
 //
 //  Created by Mohammed Jalal Alamer on 17.03.25.
@@ -9,42 +9,47 @@ import AuthenticationServices
 import FirebaseAuth
 import FirebaseCore
 import FirebaseFirestore
+import SwiftUI
 
-class FirebaseAuthDataSource {
+protocol AuthRepository {
+    func login(email: String, password: String) async throws
+    func register(email: String, password: String, name: String) async throws
+    func loginAnonymously() async throws
+    func logout() throws
+    func getCurrentUser() -> SportUser?
+}
+
+class AuthRepositoryImpl: AuthRepository {
+    @AppStorage("userId") var userId: String = ""
     private let auth = Auth.auth()
 
-    func login(email: String, password: String) async throws -> SportUser {
+    func login(email: String, password: String) async throws {
         let result = try await auth.signIn(withEmail: email, password: password)
-        return SportUser(
-            id: result.user.uid, name: result.user.displayName ?? "",
-            email: result.user.email ?? "", points: 0)
+        userId = result.user.uid
     }
 
-    func register(email: String, password: String, name: String) async throws
-        -> SportUser
-    {
-        let result = try await auth.createUser(
-            withEmail: email, password: password)
+    func register(email: String, password: String, name: String) async throws {
+        let result = try await auth.createUser(withEmail: email, password: password)
         let user = result.user
+        userId = user.uid
         let newUser = SportUser(
             id: user.uid, name: name, email: user.email ?? "", points: 0)
         try await Firestore.firestore().collection("users").document(user.uid)
             .setData(newUser.toDictionary())
-        return newUser
     }
 
-    func loginAnonyomously() async throws -> SportUser {
-        let result = try await auth.signInAnonymously()
-        let user = result.user
-        return SportUser(id: user.uid, name: "User", email: user.email ?? "", points: 0)
+    func loginAnonymously() async throws {
+        try await auth.signInAnonymously()
     }
 
     func logout() throws {
         try auth.signOut()
+        userId = ""
     }
 
     func getCurrentUser() -> SportUser? {
         guard let user = auth.currentUser else { return nil }
+        userId = user.uid
         return SportUser(
             id: user.uid, name: user.displayName ?? "", email: user.email ?? "",
             points: 0)

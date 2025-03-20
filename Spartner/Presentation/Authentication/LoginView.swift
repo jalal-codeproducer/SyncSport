@@ -47,7 +47,7 @@ struct LoginView: View {
                 Button(action: {
                     Task {
                         if !viewModel.isLoading {
-                            isAuthenticated = await viewModel.login(
+                            await viewModel.login(
                                 email: email, password: password)
                         }
                     }

@@ -10,8 +10,7 @@ import FirebaseCore
 import SwiftUI
 
 struct RegisterView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
-
+    @StateObject private var viewModel = DependencyInjection.shared.provideAuthViewModel()
     @State private var username = ""
     @State private var email = ""
     @State private var password = ""

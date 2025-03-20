@@ -11,19 +11,17 @@ import SwiftUI
 @MainActor
 class AuthViewModel: ObservableObject {
     @Published var isLoggedIn = false
-    @Published var user: SportUser?
     @Published var isLoading = false
     @Published var errorMessage: String?
-    private let useCase: AuthUseCase
+    private let repository: AuthRepositoryImpl
 
-    init(useCase: AuthUseCase) {
-        self.useCase = useCase
+    init(repository: AuthRepositoryImpl) {
+        self.repository = repository
         checkAuthState()
     }
 
-    func login(email: String, password: String) async -> Bool {
+    func login(email: String, password: String) async {
         isLoading = true
-        var isSuccess = false
 
         defer {
             isLoading = false
@@ -31,17 +29,16 @@ class AuthViewModel: ObservableObject {
 
         if validateInputs(email: email, password: password) {
             do {
-                self.user = try await useCase.login(
+                try await repository.login(
                     email: email, password: password)
 
-                isSuccess = true
+                isLoggedIn = true
 
             } catch {
                 errorMessage = error.localizedDescription
             }
         }
 
-        return isSuccess
     }
 
     func register(
@@ -60,7 +57,7 @@ class AuthViewModel: ObservableObject {
             else {
                 return
             }
-            self.user = try await useCase.register(
+            try await repository.register(
                 email: email, password: password, name: name)
             isLoggedIn = true
         } catch {
@@ -73,9 +70,9 @@ class AuthViewModel: ObservableObject {
         defer {
             isLoading = false
         }
-        
+
         do {
-            self.user = try await useCase.loginAnonyomously()
+            try await repository.loginAnonymously()
             isLoggedIn = true
         } catch {
             errorMessage = error.localizedDescription
@@ -84,17 +81,16 @@ class AuthViewModel: ObservableObject {
 
     func logout() {
         do {
-            try useCase.logout()
-            self.user = nil
+            try repository.logout()
+            isLoggedIn = false
         } catch {
             print("Logout error:", error)
         }
     }
 
     func checkAuthState() {
-        let user = useCase.getCurrentUser()
+        let user = repository.getCurrentUser()
         if user != nil {
-            self.user = user
             isLoggedIn = true
         }
     }

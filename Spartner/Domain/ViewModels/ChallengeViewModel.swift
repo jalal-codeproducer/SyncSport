@@ -10,21 +10,21 @@ import Foundation
 
 @MainActor
 class ChallengeViewModel: ObservableObject {
-    private let useCase: ChallengeUseCase
+    private let repository: ChallengeRepositoryImpl
     private var cancellables = Set<AnyCancellable>()
 
     @Published var challenges: [Challenge] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
 
-    init(useCase: ChallengeUseCase) {
-        self.useCase = useCase
+    init(repository: ChallengeRepositoryImpl) {
+        self.repository = repository
     }
 
     func createChallenges() {
         Task {
             do {
-                try await useCase.createChallenges()
+                try await repository.createChallenges()
             } catch {
                 errorMessage = error.localizedDescription
             }
@@ -37,7 +37,7 @@ class ChallengeViewModel: ObservableObject {
 
         Task {
             do {
-                let fetchedChallenges = try await useCase.fetchChallenges()
+                let fetchedChallenges = try await repository.getChallenges()
                 DispatchQueue.main.async {
                     self.challenges = fetchedChallenges
                     self.isLoading = false
@@ -57,7 +57,8 @@ class ChallengeViewModel: ObservableObject {
                 if let challenge = challenges.first(where: {
                     $0.id == challengeId
                 }) {
-                    try await useCase.completeChallenge(challenge)
+                    try await repository.updateChallengeStatus(
+                        challenge, status: .completed)
 
                     DispatchQueue.main.async {
                         self.challenges.removeAll { $0.id == challengeId }
