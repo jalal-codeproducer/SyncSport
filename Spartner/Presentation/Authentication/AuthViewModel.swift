@@ -10,6 +10,8 @@ import SwiftUI
 
 @MainActor
 class AuthViewModel: ObservableObject {
+    @Published var showSplash = true
+    @Published var sportUser : SportUser?
     @Published var isLoggedIn = false
     @Published var isLoading = false
     @Published var errorMessage: String?
@@ -17,7 +19,9 @@ class AuthViewModel: ObservableObject {
 
     init(repository: AuthRepositoryImpl) {
         self.repository = repository
-        checkAuthState()
+        Task {
+            await checkAuthState()
+        }
     }
 
     func login(email: String, password: String) async {
@@ -88,11 +92,21 @@ class AuthViewModel: ObservableObject {
         }
     }
 
-    func checkAuthState() {
-        let user = repository.getCurrentUser()
-        if user != nil {
-            isLoggedIn = true
+    func checkAuthState() async {
+        try? await Task.sleep(nanoseconds: 2_500_000_000)
+        defer {
+            showSplash = false
         }
+        do{
+            let user = try await repository.getCurrentUser()
+            if user != nil {
+                sportUser = user
+                isLoggedIn = true
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+
     }
 
     private func validate(

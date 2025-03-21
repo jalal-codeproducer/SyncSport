@@ -23,8 +23,7 @@ class DependencyInjection {
 
     // MARK: - View Models (Singleton Instances)
     private var authViewModel: AuthViewModel?
-    private var userViewModel: UserViewModel?
-    private var challengeViewModel: ChallengeViewModel?
+    private var dashboardViewModel: DashboardViewModel?
 
     // MARK: - View Model Providers
     @MainActor
@@ -38,25 +37,15 @@ class DependencyInjection {
         return newAuthViewModel
     }
 
-    @MainActor
-    func provideUserViewModel() -> UserViewModel {
-        if let userViewModel = userViewModel {
-            return userViewModel
-        }
-        let newUserViewModel = UserViewModel(
-            repository: sportUserRepository as! SportUserRepositoryImpl)
-        userViewModel = newUserViewModel
-        return newUserViewModel
-    }
 
     @MainActor
-    func provideChallengeViewModel() -> ChallengeViewModel {
-        if let challengeViewModel = challengeViewModel {
-            return challengeViewModel
+    func provideDashboardViewModel() -> DashboardViewModel {
+        if let dashboardViewModel = dashboardViewModel {
+            return dashboardViewModel
         }
-        let newChallengeViewModel = ChallengeViewModel(
+        let newDashboardViewModel = DashboardViewModel(
             repository: challengeRepository as! ChallengeRepositoryImpl)
-        challengeViewModel = newChallengeViewModel
-        return newChallengeViewModel
+        dashboardViewModel = newDashboardViewModel
+        return newDashboardViewModel
     }
 }

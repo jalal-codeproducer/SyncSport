@@ -16,12 +16,13 @@ protocol AuthRepository {
     func register(email: String, password: String, name: String) async throws
     func loginAnonymously() async throws
     func logout() throws
-    func getCurrentUser() -> SportUser?
+    func getCurrentUser() async throws -> SportUser?
 }
 
 class AuthRepositoryImpl: AuthRepository {
     @AppStorage("userId") var userId: String = ""
     private let auth = Auth.auth()
+    private let firestore = Firestore.firestore()
 
     func login(email: String, password: String) async throws {
         let result = try await auth.signIn(withEmail: email, password: password)
@@ -29,12 +30,13 @@ class AuthRepositoryImpl: AuthRepository {
     }
 
     func register(email: String, password: String, name: String) async throws {
-        let result = try await auth.createUser(withEmail: email, password: password)
+        let result = try await auth.createUser(
+            withEmail: email, password: password)
         let user = result.user
         userId = user.uid
         let newUser = SportUser(
             id: user.uid, name: name, email: user.email ?? "", points: 0)
-        try await Firestore.firestore().collection("users").document(user.uid)
+        try await firestore.collection("users").document(user.uid)
             .setData(newUser.toDictionary())
     }
 
@@ -47,11 +49,19 @@ class AuthRepositoryImpl: AuthRepository {
         userId = ""
     }
 
-    func getCurrentUser() -> SportUser? {
-        guard let user = auth.currentUser else { return nil }
-        userId = user.uid
-        return SportUser(
-            id: user.uid, name: user.displayName ?? "", email: user.email ?? "",
-            points: 0)
+    func getCurrentUser() async throws -> SportUser? {
+        guard let firebaseUser = auth.currentUser else { return nil }
+        userId = firebaseUser.uid
+
+        let document = try await firestore.collection("users").document(userId)
+            .getDocument()
+
+        if document.exists {
+            let data = document.data()
+
+            return SportUser.fromDictionary(data!)
+        } else {
+            return nil
+        }
     }
 }

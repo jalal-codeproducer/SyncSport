@@ -1,17 +1,16 @@
 //
-//  ChallengeViewModel.swift
+//  DashboardViewModel.swift
 //  Spartner
 //
-//  Created by Mohammed Jalal Alamer on 18.03.25.
+//  Created by Mohammed Jalal Alamer on 20.03.25.
 //
 
 import Combine
 import Foundation
 
 @MainActor
-class ChallengeViewModel: ObservableObject {
+class DashboardViewModel: ObservableObject {
     private let repository: ChallengeRepositoryImpl
-    private var cancellables = Set<AnyCancellable>()
 
     @Published var challenges: [Challenge] = []
     @Published var isLoading = false
@@ -57,8 +56,7 @@ class ChallengeViewModel: ObservableObject {
                 if let challenge = challenges.first(where: {
                     $0.id == challengeId
                 }) {
-                    try await repository.updateChallengeStatus(
-                        challenge, status: .completed)
+                    
 
                     DispatchQueue.main.async {
                         self.challenges.removeAll { $0.id == challengeId }

@@ -1,6 +1,6 @@
 //
-//  ContentView.swift
-//  Spartner
+//  LoginView.swift
+//  SyncSports
 //
 //  Created by Mohammed Jalal Alamer on 02.03.25.
 //
@@ -12,6 +12,7 @@ struct LoginView: View {
         .provideAuthViewModel()
     @State private var email = ""
     @State private var password = ""
+    @State private var animateContent = false
 
     @Binding var isRegistering: Bool
     @Binding var isAuthenticated: Bool
@@ -24,24 +25,60 @@ struct LoginView: View {
     }
 
     var body: some View {
-        ZStack {
-            Color.white
-                .ignoresSafeArea()
-            VStack {
-                AuthenticationHeader(text: "Welcome Back")
+        VStack(spacing: 25) {
+            VStack(spacing: 15) {
+                ZStack {
+                    Circle()
+                        .fill(Color.white.opacity(0.15))
+                        .frame(width: 110, height: 110)
 
-                EmailInputView(email: $email)
-                PasswordInputView(
-                    password: $password, placeholder: "Password")
+                    Image(systemName: "figure.run")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.white)
+                }
+
+            }
+            .padding(.top, 20)
+            .opacity(animateContent ? 1 : 0)
+            .offset(y: animateContent ? 0 : -20)
+
+            Text("Welcome Back")
+                .font(.system(size: 28, weight: .bold, design: .rounded))
+                .foregroundColor(.white)
+                .padding(.top, 20)
+                .opacity(animateContent ? 1 : 0)
+                .offset(y: animateContent ? 0 : -15)
+
+            VStack(spacing: 20) {
+                AuthField(
+                    text: $email,
+                    icon: "envelope.fill",
+                    title: "Email",
+                    placeholder: "Enter your email",
+                    keyboardType: .emailAddress
+                )
+
+                AuthField(
+                    text: $password,
+                    icon: "lock.fill",
+                    title: "Password",
+                    placeholder: "Create a password",
+                    isSecure: true
+                )
+
 
                 if viewModel.errorMessage != nil {
                     Text(viewModel.errorMessage!)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .font(.footnote)
-                        .foregroundColor(.red)
+                        .font(.system(size: 14, design: .rounded))
+                        .foregroundColor(Color.white)
                         .padding(10)
-                } else {
-                    Spacer().frame(height: 20)
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(Color.red.opacity(0.7))
+                        )
+                        .padding(.top, 5)
                 }
 
                 Button(action: {
@@ -52,24 +89,89 @@ struct LoginView: View {
                         }
                     }
                 }) {
-                    if !viewModel.isLoading {
-                        AuthenticationButtonContent(text: "Login")
-                    } else {
-                        LoadingView()
-                    }
-                }.padding(.bottom, 20)
+                    ZStack {
+                        if !viewModel.isLoading {
+                            HStack {
+                                Text("Login")
+                                    .font(
+                                        .system(
+                                            size: 18, weight: .bold,
+                                            design: .rounded))
 
-                Button("Don't have an account? Register!") {
+                                Image(systemName: "arrow.right.circle.fill")
+                                    .font(.system(size: 20))
+                            }
+                            .foregroundColor(Color(hex: "1a2a6c"))
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(
+                                Capsule()
+                                    .fill(Color.white)
+                            )
+                        } else {
+                            ProgressView()
+                                .progressViewStyle(
+                                    CircularProgressViewStyle(tint: .white)
+                                )
+                                .scaleEffect(1.2)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(
+                                    Capsule()
+                                        .fill(Color.white.opacity(0.3))
+                                )
+                        }
+                    }
+                }
+                .padding(.top, 10)
+
+                Button(action: {
                     if !viewModel.isLoading {
                         isRegistering = true
                     }
+                }) {
+                    HStack {
+                        Text("Don't have an account?")
+                            .font(.system(size: 16, design: .rounded))
+
+                        Text("Register!")
+                            .font(
+                                .system(
+                                    size: 16, weight: .bold, design: .rounded))
+                    }
+                    .foregroundColor(.white)
+                    .padding(.top, 5)
                 }
-                .font(.subheadline)
-                .foregroundColor(.gray)
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 10)
+            .opacity(animateContent ? 1 : 0)
+            .offset(y: animateContent ? 0 : 20)
 
-            }.padding()
+            Spacer()
         }
+        .padding(.horizontal)
+        .padding(.vertical, 20)
+        .onAppear {
+            withAnimation(.easeOut(duration: 0.8)) {
+                animateContent = true
+            }
+        }.withAppBackground()
 
+    }
+}
+
+extension View {
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content
+    ) -> some View {
+
+        ZStack(alignment: alignment) {
+            placeholder().opacity(shouldShow ? 1 : 0)
+            self
+        }
     }
 }
 

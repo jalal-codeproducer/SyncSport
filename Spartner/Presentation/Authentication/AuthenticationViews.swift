@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct AuthenticationHeader: View {
-    var text : String
-    
+    var text: String
+
     var body: some View {
         Text(text)
             .foregroundColor(.black)
@@ -20,58 +20,6 @@ struct AuthenticationHeader: View {
 }
 
 
-struct UsernameInputView: View {
-    @Binding var username: String
-
-    var body: some View {
-        TextField(
-            "", text: $username, prompt: Text("Username").foregroundColor(.gray)
-        )
-        .padding()
-        .foregroundColor(Color.black)
-        .background(
-            Color(red: 239 / 255, green: 243 / 255, blue: 244 / 255)
-        )
-        .cornerRadius(5)
-        .padding(.bottom, 20)
-    }
-}
-
-
-struct EmailInputView: View {
-    @Binding var email: String
-
-    var body: some View {
-        TextField(
-            "", text: $email, prompt: Text("Email").foregroundColor(.gray)
-        )
-        .keyboardType(.emailAddress)
-        .padding()
-        .foregroundColor(Color.black)
-        .background(
-            Color(red: 239 / 255, green: 243 / 255, blue: 244 / 255)
-        )
-        .cornerRadius(5)
-        .padding(.bottom, 20)
-    }
-}
-
-struct PasswordInputView: View {
-    @Binding var password: String
-    var placeholder : String
-
-    var body: some View {
-        SecureField(
-            "", text: $password, prompt: Text(placeholder).foregroundColor(.gray)
-        )
-        .padding()
-        .foregroundColor(Color.black)
-        .background(
-            Color(red: 239 / 255, green: 243 / 255, blue: 244 / 255)
-        )
-        .cornerRadius(5)
-    }
-}
 
 struct AuthenticationButtonContent: View {
     var text: String
@@ -86,11 +34,53 @@ struct AuthenticationButtonContent: View {
     }
 }
 
-struct LoadingView: View {
+
+struct AuthField: View {
+    @Binding var text: String
+    var icon: String
+    var title: String
+    var placeholder: String
+    var isSecure: Bool = false
+    var keyboardType: UIKeyboardType = .default
+
     var body: some View {
-        ProgressView()
-            .progressViewStyle(CircularProgressViewStyle(tint: .gray))
-            .scaleEffect(2)
+        VStack(alignment: .leading, spacing: 8) {
+            Text(title)
+                .font(.system(size: 16, weight: .medium, design: .rounded))
+                .foregroundColor(.white)
+
+            HStack {
+                Image(systemName: icon)
+                    .foregroundColor(.white.opacity(0.7))
+                    .frame(width: 20)
+
+                if isSecure {
+                    SecureField("", text: $text)
+                        .placeholder(when: $text.wrappedValue.isEmpty) {
+                            Text(placeholder).foregroundColor(
+                                .white.opacity(0.7))
+                        }
+                        .foregroundColor(.white)
+                } else {
+                    TextField("", text: $text)
+                        .placeholder(when: $text.wrappedValue.isEmpty) {
+                            Text(placeholder).foregroundColor(
+                                .white.opacity(0.7))
+                        }
+                        .foregroundColor(.white)
+                        .keyboardType(keyboardType)
+                        .autocapitalization(
+                            keyboardType == .emailAddress ? .none : .words
+                        )
+                        .disableAutocorrection(keyboardType == .emailAddress)
+                }
+            }
             .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color.white.opacity(0.2))
+            )
+        }
     }
+
 }

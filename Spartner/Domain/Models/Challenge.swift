@@ -11,10 +11,10 @@ struct Challenge: Identifiable, Codable {
     var id: String = UUID().uuidString 
     var title: String
     var description: String?
+    var image: String?
     var target: Double
     var level: ChallengeLevel
     var points: Int
-    var status: ChallengeStatus
     var date: Date
     var createdAt: Date = Date()
 
@@ -23,10 +23,10 @@ struct Challenge: Identifiable, Codable {
             "id": id,
             "title": title,
             "description": description ?? "",
+            "image": image ?? "",
             "target": target,
             "level": level.rawValue,
             "points": points,
-            "status": status.rawValue,
             "date": date.timeIntervalSince1970,
             "createdAt": createdAt.timeIntervalSince1970
         ]
@@ -39,8 +39,6 @@ struct Challenge: Identifiable, Codable {
               let levelRaw = dict["level"] as? String,
               let level = ChallengeLevel(rawValue: levelRaw),
               let points = dict["points"] as? Int,
-              let statusRaw = dict["status"] as? String,
-              let status = ChallengeStatus(rawValue: statusRaw),
               let dateTimestamp = dict["date"] as? TimeInterval,
               let createdAtTimestamp = dict["createdAt"] as? TimeInterval
         else { return nil }
@@ -49,10 +47,10 @@ struct Challenge: Identifiable, Codable {
             id: id,
             title: title,
             description: dict["description"] as? String,
+            image: dict["image"] as? String,
             target: target,
             level: level,
             points: points,
-            status: status,
             date: Date(timeIntervalSince1970: dateTimestamp),
             createdAt: Date(timeIntervalSince1970: createdAtTimestamp)
         )
@@ -61,10 +59,4 @@ struct Challenge: Identifiable, Codable {
 
 enum ChallengeLevel: String, Codable {
     case easy, medium, hard
-}
-
-enum ChallengeStatus: String, Codable {
-    case notStarted = "not_started"
-    case inProgress = "in_progress"
-    case completed = "completed"
 }
