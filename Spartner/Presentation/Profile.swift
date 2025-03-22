@@ -13,7 +13,6 @@ struct ProfileView: View {
     @State private var animateElements = false
     
     var body: some View {
-        ScrollView {
             VStack(spacing: 30) {
                 VStack(spacing: 12) {
                     ZStack {
@@ -162,23 +161,25 @@ struct ProfileView: View {
                 Spacer()
             }
             .padding(.bottom, 30)
-        }
-        .onAppear {
-            withAnimation(.easeOut(duration: 0.8)) {
-                animateElements = true
+            .withAppBackground()
+            .onAppear {
+                withAnimation(.easeOut(duration: 0.8)) {
+                    animateElements = true
+                }
             }
-        }
-        .alert(isPresented: $showingLogoutAlert) {
-            Alert(
-                title: Text("Logout"),
-                message: Text("Are you sure you want to logout?"),
-                primaryButton: .destructive(Text("Logout")) {
-                    // Handle logout action here
-                    print("User logged out")
-                },
-                secondaryButton: .cancel()
-            )
-        }
+            .alert(isPresented: $showingLogoutAlert) {
+                Alert(
+                    title: Text("Logout"),
+                    message: Text("Are you sure you want to logout?"),
+                    primaryButton: .destructive(Text("Logout")) {
+                        // Handle logout action here
+                        print("User logged out")
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
+        
+        
     }
 }
 

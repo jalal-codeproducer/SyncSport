@@ -17,13 +17,13 @@ struct Dashboard: View {
     @EnvironmentObject var trackManger: TrackManager
     
     var body: some View {
-        if !dashboardViewModel.isLoading {
-            LoadingView()
+        if dashboardViewModel.isLoading {
+            LoadingView().withAppBackground()
         } else {
             DashboardContent(
                 userViewModel: userViewModel,
                 dashboardViewModel: dashboardViewModel
-            )
+            ).withAppBackground()
         }
     }
 }
@@ -42,14 +42,12 @@ struct DashboardContent: View {
                 
                 ChallengesContent(dashboardViewModel: dashboardViewModel)
             }
-            .padding(.bottom, 100)
             .onAppear {
                 if dashboardViewModel.challenges.isEmpty {
                     dashboardViewModel.fetchChallenges()
                 }
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
@@ -96,7 +94,7 @@ struct ActivityIndicator: View {
                 .frame(width: 50, height: 50)
                 .rotationEffect(Angle(degrees: rotation))
                 .onAppear {
-                    withAnimation(.linear(duration: 1.5).repeatForever(autoreverses: false)) {
+                    withAnimation(.linear(duration: 1.5)) {
                         rotation = 360
                     }
                 }

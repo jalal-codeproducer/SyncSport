@@ -13,7 +13,6 @@ struct ChallengeCard: View {
     
     var body: some View {
         ZStack {
-            // Gradient background similar to SplashView
             LinearGradient(
                 gradient: Gradient(colors: [
                     Color(hex: "1a2a6c").opacity(0.85),
@@ -73,24 +72,25 @@ struct ChallengeCard: View {
                         )
                     }
                     
-                    Button(action: {
-                    }) {
-                        ZStack {
-                            Text("Start Challenge")
-                                .font(.system(size: 14, weight: .medium, design: .rounded))
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 20)
-                                .padding(.vertical, 8)
+                    NavigationStack {
+                        NavigationLink(destination: TrackView(challenge: challenge)) {
+                            ZStack {
+                                Text("View Challenge")
+                                    .font(.system(size: 14, weight: .medium, design: .rounded))
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal, 20)
+                                    .padding(.vertical, 8)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .background(Color.white.opacity(0.15))
+                            .cornerRadius(20)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(Color.white.opacity(0.3), lineWidth: 1)
+                            )
                         }
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white.opacity(0.15))
-                        .cornerRadius(20)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.white.opacity(0.3), lineWidth: 1)
-                        )
+                        .padding(.top, 5)
                     }
-                    .padding(.top, 5)
                 }
             }
             .padding(15)
@@ -118,7 +118,7 @@ struct ChallengeCard: View {
                 .stroke(Color.white.opacity(0.2), lineWidth: 1)
         )
     }
-    
+
     private func getLevelOpacity(for position: Int) -> Double {
         switch challenge.level {
         case .easy:
@@ -129,7 +129,7 @@ struct ChallengeCard: View {
             return 1
         }
     }
-    
+
     private func getLevelColor() -> Color {
         switch challenge.level {
         case .easy:
