@@ -40,23 +40,30 @@ struct ContentView: View {
                                         : "flag.checkered.circle")
                             }
                             .tag(0)
-
+                            
                             NavigationStack {
-                                ProfileView(
-                                    user: SportUser(
-                                        name: "John Doe",
-                                        email: "john.doe@example.com",
-                                        points: 275
-                                    ))
+                                Text("History").withAppBackground()
                             }
                             .tabItem {
                                 Label(
-                                    "Profile",
+                                    "History",
                                     systemImage: selectedIndex == 1
+                                        ? "chart.bar"
+                                        : "chart.bar.fill")
+                            }
+                            .tag(1)
+
+                            NavigationStack {
+                                ProfileView()
+                            }
+                            .tabItem {
+                                Label(
+                                    "Profiles",
+                                    systemImage: selectedIndex == 2
                                         ? "person.crop.circle.fill"
                                         : "person.crop.circle")
                             }
-                            .tag(1)
+                            .tag(2)
                         }
                         .onAppear {
                             let appearance = UITabBarAppearance()

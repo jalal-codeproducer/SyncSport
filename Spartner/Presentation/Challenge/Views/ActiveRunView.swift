@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActiveRunView: View {
-    @ObservedObject var viewModel: TrackViewModel
+    @ObservedObject var viewModel: ChallengeViewModel
     let challenge: Challenge
 
     var body: some View {
@@ -124,7 +124,7 @@ struct ActiveRunView: View {
 }
 
 #Preview {
-    let viewModel = DependencyInjection.shared.provideRunTrackerViewmodel()
+    let viewModel = DependencyInjection.shared.provideChallengeViewmodel()
     ActiveRunView(
         viewModel: viewModel,
         challenge: Challenge(

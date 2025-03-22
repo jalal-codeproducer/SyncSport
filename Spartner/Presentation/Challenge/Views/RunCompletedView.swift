@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RunCompletedView: View {
-    @ObservedObject var viewModel: TrackViewModel
+    @ObservedObject var viewModel: ChallengeViewModel
     let onBack: () -> Void
     let challenge: Challenge
 
@@ -211,7 +211,7 @@ struct RunCompletedView: View {
 }
 
 #Preview {
-    let viewModel = DependencyInjection.shared.provideRunTrackerViewmodel()
+    let viewModel = DependencyInjection.shared.provideChallengeViewmodel()
 
     RunCompletedView(
         viewModel: viewModel,

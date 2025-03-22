@@ -3,7 +3,7 @@ import SwiftUI
 
 struct CountDownView: View {
     @State var viewModel = DependencyInjection.shared
-        .provideRunTrackerViewmodel()
+        .provideChallengeViewmodel()
     @State private var timer: Timer?
     @State private var countDown = 4
     @State private var audioPlayer: AVAudioPlayer?

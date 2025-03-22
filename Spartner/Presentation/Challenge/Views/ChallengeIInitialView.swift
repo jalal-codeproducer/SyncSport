@@ -98,7 +98,7 @@ struct ChallengeHeaderBar: View {
 }
 
 struct ReadyToStartView: View {
-    let viewModel: TrackViewModel
+    let viewModel: ChallengeViewModel
     let challenge: Challenge
 
     var body: some View {

@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct TrackView: View {
+struct ChallengeView: View {
     @StateObject var viewModel = DependencyInjection.shared
-        .provideRunTrackerViewmodel()
+        .provideChallengeViewmodel()
     @Environment(\.presentationMode) var presentationMode
     let challenge: Challenge
 
@@ -81,7 +81,7 @@ struct StatBlockView: View {
 
 
 #Preview {
-    TrackView(
+    ChallengeView(
         challenge: Challenge(
             title: "10K Consistency Goal",
             description:

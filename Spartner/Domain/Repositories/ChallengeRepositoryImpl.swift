@@ -6,23 +6,25 @@
 //
 
 import FirebaseFirestore
+import CoreLocation
 
 protocol ChallengeRepository {
     func createChallenges() async throws
     func getChallenges() async throws -> [Challenge]
+    func trackChallenge(track: Track) async throws
+    func fetchChallengeTracks(challengeId: String) async throws -> [Track]
 }
 
 class ChallengeRepositoryImpl: ChallengeRepository {
     private let db = Firestore.firestore()
 
     func createChallenges() async throws {
-
         let imageNames = (1...10).map { "\($0)" }
         var base64Images: [String] = []
 
         for imageName in imageNames {
             if let image = UIImage(named: imageName),
-                let base64String = ImageUtilities.imageToBase64String(image)
+               let base64String = ImageUtilities.imageToBase64String(image)
             {
                 base64Images.append(base64String)
             } else {
@@ -146,6 +148,24 @@ class ChallengeRepositoryImpl: ChallengeRepository {
         let snapshot = try await db.collection("challenges").getDocuments()
         return snapshot.documents.compactMap {
             Challenge.fromDictionary($0.data())
+        }
+    }
+
+    func trackChallenge(track: Track) async throws {
+        let collectionRef = db.collection("tracks")
+        let documentRef = collectionRef.document(track.id)
+        let trackData = track.toDictionary()
+
+        try await documentRef.setData(trackData)
+    }
+
+    func fetchChallengeTracks(challengeId: String) async throws -> [Track] {
+        let snapshot = try await db.collection("tracks")
+            .whereField("challengeId", isEqualTo: challengeId)
+            .getDocuments()
+
+        return snapshot.documents.compactMap {
+            Track.fromDictionary($0.data())
         }
     }
 }

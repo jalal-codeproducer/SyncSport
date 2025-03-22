@@ -73,7 +73,7 @@ struct ChallengeCard: View {
                     }
                     
                     NavigationStack {
-                        NavigationLink(destination: TrackView(challenge: challenge)) {
+                        NavigationLink(destination: ChallengeView(challenge: challenge)) {
                             ZStack {
                                 Text("View Challenge")
                                     .font(.system(size: 14, weight: .medium, design: .rounded))

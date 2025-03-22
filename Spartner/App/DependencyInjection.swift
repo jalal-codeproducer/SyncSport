@@ -24,7 +24,7 @@ class DependencyInjection {
     // MARK: - View Models (Singleton Instances)
     private var authViewModel: AuthViewModel?
     private var dashboardViewModel: DashboardViewModel?
-    private var runTrackerViewModel: TrackViewModel?
+    private var challengeViewModel: ChallengeViewModel?
 
     // MARK: - View Model Providers
     @MainActor
@@ -38,7 +38,6 @@ class DependencyInjection {
         return newAuthViewModel
     }
 
-
     @MainActor
     func provideDashboardViewModel() -> DashboardViewModel {
         if let dashboardViewModel = dashboardViewModel {
@@ -49,15 +48,16 @@ class DependencyInjection {
         dashboardViewModel = newDashboardViewModel
         return newDashboardViewModel
     }
-    
+
     @MainActor
-    func provideRunTrackerViewmodel() -> TrackViewModel {
-        if let runTrackerViewModel = runTrackerViewModel {
-            return runTrackerViewModel
+    func provideChallengeViewmodel() -> ChallengeViewModel {
+        if let challengeViewModel = challengeViewModel {
+            return challengeViewModel
         }
-        let newRunTrackerViewModel = TrackViewModel(
-            trackManager: TrackManager())
-        runTrackerViewModel = newRunTrackerViewModel
-        return newRunTrackerViewModel
+        let newChallengeViewModel = ChallengeViewModel(
+            trackManager: TrackManager(),
+            repository: challengeRepository as! ChallengeRepositoryImpl)
+        challengeViewModel = newChallengeViewModel
+        return newChallengeViewModel
     }
 }
