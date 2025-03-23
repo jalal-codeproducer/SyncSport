@@ -25,6 +25,7 @@ class DependencyInjection {
     private var authViewModel: AuthViewModel?
     private var dashboardViewModel: DashboardViewModel?
     private var challengeViewModel: ChallengeViewModel?
+    private var trackingViewModel: TrackingViewModel?
 
     // MARK: - View Model Providers
     @MainActor
@@ -59,5 +60,17 @@ class DependencyInjection {
             repository: challengeRepository as! ChallengeRepositoryImpl)
         challengeViewModel = newChallengeViewModel
         return newChallengeViewModel
+    }
+
+    @MainActor
+    func provideTrackingViewModel() -> TrackingViewModel {
+        if let trackingViewModel = trackingViewModel {
+            return trackingViewModel
+        }
+
+        let newTrackingViewModel = TrackingViewModel(
+            repository: challengeRepository as! ChallengeRepositoryImpl)
+        trackingViewModel = newTrackingViewModel
+        return newTrackingViewModel
     }
 }

@@ -24,7 +24,10 @@ struct ChallengeView: View {
                 )
                 ReadyToStartView(viewModel: viewModel, challenge: challenge)
             case .running:
-                ActiveRunView(viewModel: viewModel, challenge: challenge)
+                ZStack{
+                    ActiveRunView(viewModel: viewModel, challenge: challenge)
+                    Text("\(viewModel.path.count)")
+                }
             case .done:
                 RunCompletedView( 
                     viewModel: viewModel,

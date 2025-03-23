@@ -39,10 +39,9 @@ final class TrackManager: NSObject, ObservableObject, CLLocationManagerDelegate 
     
     func stopTrackingUserLocation() {
         manager.stopUpdatingLocation()
-        resetTrackingData()
     }
     
-    private func resetTrackingData() {
+    func resetTrackingData() {
         totalDistanceMoved = 0.0
         lastKnownLocation = nil
         trackingPath.removeAll()

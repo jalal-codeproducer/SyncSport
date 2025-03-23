@@ -12,7 +12,7 @@ protocol ChallengeRepository {
     func createChallenges() async throws
     func getChallenges() async throws -> [Challenge]
     func trackChallenge(track: Track) async throws
-    func fetchChallengeTracks(challengeId: String) async throws -> [Track]
+    func fetchChallengeTracks(userId: String) async throws -> [Track]
 }
 
 class ChallengeRepositoryImpl: ChallengeRepository {
@@ -159,9 +159,9 @@ class ChallengeRepositoryImpl: ChallengeRepository {
         try await documentRef.setData(trackData)
     }
 
-    func fetchChallengeTracks(challengeId: String) async throws -> [Track] {
+    func fetchChallengeTracks(userId: String) async throws -> [Track] {
         let snapshot = try await db.collection("tracks")
-            .whereField("challengeId", isEqualTo: challengeId)
+            .whereField("userId", isEqualTo: userId)
             .getDocuments()
 
         return snapshot.documents.compactMap {

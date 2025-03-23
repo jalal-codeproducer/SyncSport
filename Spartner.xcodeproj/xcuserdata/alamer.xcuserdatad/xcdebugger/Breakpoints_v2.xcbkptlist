@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B15AB129-2835-485C-9024-66D87E9C7CD2"
+            uuid = "6F905DC5-F97C-4D7E-80E1-EBC32D3DC85F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Spartner/Domain/Repositories/AuthRepositoryImpl.swift"
+            filePath = "Spartner/Presentation/Challenge/ChallengeViewModel/ChallengeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "getCurrentUser()"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "reset()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F108080-C72E-4FD5-AD63-613152862EF7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spartner/Presentation/Challenge/ChallengeViewModel/ChallengeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "saveTrack()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

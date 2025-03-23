@@ -41,17 +41,7 @@ struct ContentView: View {
                             }
                             .tag(0)
                             
-                            NavigationStack {
-                                Text("History").withAppBackground()
-                            }
-                            .tabItem {
-                                Label(
-                                    "History",
-                                    systemImage: selectedIndex == 1
-                                        ? "chart.bar"
-                                        : "chart.bar.fill")
-                            }
-                            .tag(1)
+                            
 
                             NavigationStack {
                                 ProfileView()
@@ -59,11 +49,11 @@ struct ContentView: View {
                             .tabItem {
                                 Label(
                                     "Profiles",
-                                    systemImage: selectedIndex == 2
+                                    systemImage: selectedIndex == 1
                                         ? "person.crop.circle.fill"
                                         : "person.crop.circle")
                             }
-                            .tag(2)
+                            .tag(1)                                            
                         }
                         .onAppear {
                             let appearance = UITabBarAppearance()

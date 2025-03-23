@@ -5,6 +5,7 @@
 //  Created by Mohammed Jalal Alamer on 22.03.25.
 //
 
+import CoreLocation
 import SwiftUI
 
 struct TrackDetailView: View {
@@ -17,7 +18,6 @@ struct TrackDetailView: View {
                 AppBackground()
 
                 VStack(spacing: 20) {
-                    // Map visualization
                     ZStack {
                         Color(hex: "1C2E4A")
 
@@ -43,7 +43,7 @@ struct TrackDetailView: View {
                     HStack(spacing: 15) {
                         statCard(
                             title: "Distance",
-                            value: String(format: "%.2f km", track.distance),
+                            value: String(format: "%.2f km", track.distance / 1000),
                             icon: "figure.walk")
                         statCard(
                             title: "Duration",
@@ -59,9 +59,14 @@ struct TrackDetailView: View {
                 }
                 .padding(.top)
             }
-            .navigationTitle("Track Details")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("Track Details")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Close") {
                         dismiss()
@@ -147,4 +152,24 @@ struct TrackDetailView: View {
             }
         }
     }
+}
+
+#Preview {
+    let sampleCoordinates = [
+        CLLocationCoordinate2D(latitude: 25.276987, longitude: 55.296249),
+        CLLocationCoordinate2D(latitude: 25.276701, longitude: 55.298102),
+        CLLocationCoordinate2D(latitude: 25.275923, longitude: 55.299433),
+        CLLocationCoordinate2D(latitude: 25.274502, longitude: 55.300241),
+    ]
+
+    TrackDetailView(
+        track: Track(
+            userId: "user123",
+            challengeId: "challenge101",
+            distance: 5.2,
+            duration: 2700,
+            points: 120,
+            date: Date().addingTimeInterval(-86400),
+            path: sampleCoordinates.reversed()
+        ))
 }

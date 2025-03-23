@@ -49,24 +49,4 @@ class DashboardViewModel: ObservableObject {
             }
         }
     }
-
-    func completeChallenge(challengeId: String) {
-        Task {
-            do {
-                if let challenge = challenges.first(where: {
-                    $0.id == challengeId
-                }) {
-                    
-
-                    DispatchQueue.main.async {
-                        self.challenges.removeAll { $0.id == challengeId }
-                    }
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    self.errorMessage = error.localizedDescription
-                }
-            }
-        }
-    }
 }

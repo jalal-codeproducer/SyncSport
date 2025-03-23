@@ -24,7 +24,7 @@ final class ChallengeViewModel: ObservableObject {
     @Published var elapsedTimeMinutes: Int = 0
     @Published var elapsedTimeSeconds: Int = 0
     
-    private var path : [CLLocationCoordinate2D] = []
+    @Published var path : [CLLocationCoordinate2D] = []
     private var cancellables = Set<AnyCancellable>()
     private let repository: ChallengeRepositoryImpl
     private let trackManager: TrackManager
@@ -57,9 +57,7 @@ final class ChallengeViewModel: ObservableObject {
         trackManager.$trackingPath
             .receive(on: DispatchQueue.main)
             .sink { [weak self] newPath in
-                if(!(self?.path.isEmpty ?? false)){
-                    self?.path = newPath
-                }
+                self?.path = newPath
             }
             .store(in: &cancellables)
         
@@ -165,6 +163,8 @@ final class ChallengeViewModel: ObservableObject {
         elapsedTimeSeconds = 0
 
         challenge = nil
+        
+        trackManager.resetTrackingData()
     }
 }
 

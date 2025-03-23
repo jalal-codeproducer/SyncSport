@@ -17,6 +17,7 @@ struct TrackCardList: View {
                 .font(.system(size: 20, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
                 .padding(.horizontal)
+                .padding(.top)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 12) {
@@ -24,8 +25,7 @@ struct TrackCardList: View {
                         TrackCard(track: track)
                     }
                 }
-                .padding(.horizontal)
-                .padding(.vertical, 5)
+                .padding(20)
             }
         }
     }
@@ -280,8 +280,5 @@ struct MapPreviewView: View {
         ),
     ]
 
-    return ZStack {
-        AppBackground()
-        TrackCardList(tracks: tracks)
-    }
+    TrackCardList(tracks: tracks)
 }
