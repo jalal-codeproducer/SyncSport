@@ -15,8 +15,8 @@ struct ChallengeCard: View {
         ZStack {
             LinearGradient(
                 gradient: Gradient(colors: [
-                    Color(hex: "1a2a6c").opacity(0.85),
-                    Color(hex: "b21f1f").opacity(0.85)
+                    Color(hex: "0F2027").opacity(0.9),
+                    Color(hex: "203A43").opacity(0.9),
                 ]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
