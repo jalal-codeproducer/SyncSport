@@ -1,0 +1,13 @@
+Target dependency graph (8 targets)
+Target 'SpartnerUITests' in project 'Spartner' (no dependencies)
+Target 'SpartnerUITests' in project 'Spartner'
+➜ Explicit dependency on target 'Spartner' in project 'Spartner'
+Target 'SpartnerUITests' in project 'Spartner'
+➜ Explicit dependency on target 'Spartner' in project 'Spartner'
+Target 'SpartnerTests' in project 'Spartner' (no dependencies)
+Target 'SpartnerTests' in project 'Spartner'
+➜ Explicit dependency on target 'Spartner' in project 'Spartner'
+Target 'SpartnerTests' in project 'Spartner'
+➜ Explicit dependency on target 'Spartner' in project 'Spartner'
+Target 'Spartner' in project 'Spartner' (no dependencies)
+Target 'Spartner' in project 'Spartner' (no dependencies)

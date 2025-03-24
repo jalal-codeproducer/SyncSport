@@ -1,0 +1,18 @@
+{
+  "" : {
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests-master.dia",
+    "emit-module-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests-master-emit-module.dia",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests-master.swiftdeps"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/SpartnerTests/SpartnerTests.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests~partial.swiftmodule"
+  }
+}

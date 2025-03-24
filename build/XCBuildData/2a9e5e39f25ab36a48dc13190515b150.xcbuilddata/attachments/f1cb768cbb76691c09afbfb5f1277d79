@@ -1,0 +1,28 @@
+{
+  "" : {
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests-master.dia",
+    "emit-module-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests-master-emit-module.dia",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests-master.swiftdeps"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/SpartnerUITests/SpartnerUITests.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITests~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/SpartnerUITests/SpartnerUITestsLaunchTests.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITestsLaunchTests.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITestsLaunchTests.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITestsLaunchTests.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITestsLaunchTests.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITestsLaunchTests.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITestsLaunchTests.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITestsLaunchTests.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphonesimulator/SpartnerUITests.build/Objects-normal/arm64/SpartnerUITestsLaunchTests~partial.swiftmodule"
+  }
+}

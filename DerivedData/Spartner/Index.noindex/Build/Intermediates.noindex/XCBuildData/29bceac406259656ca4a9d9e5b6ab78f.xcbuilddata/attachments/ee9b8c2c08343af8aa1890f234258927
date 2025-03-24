@@ -1,0 +1,12 @@
+{
+  "" : {
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/DerivedData/Spartner/Index.noindex/Build/Intermediates.noindex/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests-master.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/DerivedData/Spartner/Index.noindex/Build/Intermediates.noindex/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests-master.dia",
+    "emit-module-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/DerivedData/Spartner/Index.noindex/Build/Intermediates.noindex/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/DerivedData/Spartner/Index.noindex/Build/Intermediates.noindex/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests-master-emit-module.dia",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/DerivedData/Spartner/Index.noindex/Build/Intermediates.noindex/Spartner.build/Debug-iphonesimulator/SpartnerTests.build/Objects-normal/arm64/SpartnerTests-master.swiftdeps"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/SpartnerTests/SpartnerTests.swift" : {
+
+  }
+}

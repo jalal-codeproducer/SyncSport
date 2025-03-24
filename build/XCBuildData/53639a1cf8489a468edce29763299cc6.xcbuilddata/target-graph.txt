@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Target 'SpartnerUITests' in project 'Spartner'
+➜ Explicit dependency on target 'Spartner' in project 'Spartner'
+Target 'SpartnerTests' in project 'Spartner'
+➜ Explicit dependency on target 'Spartner' in project 'Spartner'
+Target 'Spartner' in project 'Spartner' (no dependencies)

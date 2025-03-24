@@ -1,0 +1,368 @@
+{
+  "" : {
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Spartner-master.dia",
+    "emit-module-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Spartner-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Spartner-master-emit-module.dia",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Spartner-master.swiftdeps"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/App/AppBackground.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AppBackground.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AppBackground.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AppBackground.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AppBackground.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AppBackground.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AppBackground.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AppBackground.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AppBackground~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/App/DependencyInjection.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DependencyInjection.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DependencyInjection.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DependencyInjection.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DependencyInjection.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DependencyInjection.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DependencyInjection.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DependencyInjection.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DependencyInjection~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/App/SpartnerApp.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SpartnerApp.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SpartnerApp.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SpartnerApp.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SpartnerApp.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SpartnerApp.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SpartnerApp.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SpartnerApp.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SpartnerApp~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Domain/Models/Challenge.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Challenge.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Challenge.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Challenge.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Challenge.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Challenge.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Challenge.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Challenge.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Challenge~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Domain/Models/SportUser.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUser.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUser.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUser.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUser.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUser.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUser.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUser.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUser~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Domain/Models/Track.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Track.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Track.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Track.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Track.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Track.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Track.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Track.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Track~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Domain/Repositories/AuthRepositoryImpl.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthRepositoryImpl.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthRepositoryImpl.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthRepositoryImpl.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthRepositoryImpl.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthRepositoryImpl.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthRepositoryImpl.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthRepositoryImpl.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthRepositoryImpl~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Domain/Repositories/ChallengeRepositoryImpl.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeRepositoryImpl.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeRepositoryImpl.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeRepositoryImpl.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeRepositoryImpl.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeRepositoryImpl.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeRepositoryImpl.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeRepositoryImpl.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeRepositoryImpl~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Domain/Repositories/SportUserRepositoryImpl.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUserRepositoryImpl.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUserRepositoryImpl.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUserRepositoryImpl.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUserRepositoryImpl.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUserRepositoryImpl.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUserRepositoryImpl.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUserRepositoryImpl.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SportUserRepositoryImpl~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Authentication/AuthenticationViews.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthenticationViews.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthenticationViews.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthenticationViews.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthenticationViews.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthenticationViews.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthenticationViews.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthenticationViews.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthenticationViews~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Authentication/AuthViewModel.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthViewModel.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthViewModel.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthViewModel.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthViewModel.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthViewModel.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthViewModel.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthViewModel.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/AuthViewModel~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Authentication/LoginView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LoginView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LoginView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LoginView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LoginView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LoginView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LoginView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LoginView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LoginView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Authentication/RegisterView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RegisterView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RegisterView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RegisterView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RegisterView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RegisterView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RegisterView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RegisterView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RegisterView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Challenge/ChallengeView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Challenge/ChallengeViewModel/ChallengeViewModel.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeViewModel.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeViewModel.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeViewModel.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeViewModel.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeViewModel.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeViewModel.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeViewModel.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeViewModel~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Challenge/ChallengeViewModel/TrackManager.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackManager.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackManager.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackManager.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackManager.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackManager.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackManager.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackManager.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackManager~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Challenge/Views/ActiveRunView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ActiveRunView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ActiveRunView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ActiveRunView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ActiveRunView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ActiveRunView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ActiveRunView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ActiveRunView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ActiveRunView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Challenge/Views/ChallengeIInitialView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeIInitialView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeIInitialView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeIInitialView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeIInitialView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeIInitialView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeIInitialView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeIInitialView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeIInitialView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Challenge/Views/CountDownView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/CountDownView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/CountDownView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/CountDownView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/CountDownView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/CountDownView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/CountDownView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/CountDownView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/CountDownView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Challenge/Views/RunCompletedView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RunCompletedView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RunCompletedView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RunCompletedView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RunCompletedView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RunCompletedView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RunCompletedView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RunCompletedView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/RunCompletedView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/ContentView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Dashboard/ChallengeCard.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeCard.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeCard.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeCard.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeCard.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeCard.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeCard.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeCard.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ChallengeCard~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Dashboard/Dashboard.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Dashboard.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Dashboard.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Dashboard.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Dashboard.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Dashboard.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Dashboard.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Dashboard.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Dashboard~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Dashboard/DashboardViewModel.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DashboardViewModel.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DashboardViewModel.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DashboardViewModel.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DashboardViewModel.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DashboardViewModel.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DashboardViewModel.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DashboardViewModel.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/DashboardViewModel~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/LottieView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LottieView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LottieView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LottieView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LottieView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LottieView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LottieView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LottieView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/LottieView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/OnBoarding/OnBoardingPage.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingPage.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingPage.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingPage.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingPage.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingPage.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingPage.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingPage.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingPage~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/OnBoarding/OnBoardingView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/OnBoardingView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Profile.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Profile.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Profile.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Profile.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Profile.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Profile.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Profile.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Profile.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/Profile~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/SplashView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SplashView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SplashView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SplashView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SplashView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SplashView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SplashView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SplashView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/SplashView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Tracking/TrackingView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Tracking/TrackingViewModel.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingViewModel.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingViewModel.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingViewModel.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingViewModel.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingViewModel.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingViewModel.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingViewModel.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackingViewModel~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Tracking/Views/TrackCard.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackCard.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackCard.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackCard.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackCard.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackCard.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackCard.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackCard.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackCard~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Presentation/Tracking/Views/TrackDetailView.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackDetailView.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackDetailView.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackDetailView.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackDetailView.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackDetailView.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackDetailView.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackDetailView.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/TrackDetailView~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Utilites/ColorUtilites.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ColorUtilites.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ColorUtilites.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ColorUtilites.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ColorUtilites.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ColorUtilites.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ColorUtilites.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ColorUtilites.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ColorUtilites~partial.swiftmodule"
+  },
+  "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/Spartner/Utilites/ImageUtilities.swift" : {
+    "const-values" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ImageUtilities.swiftconstvalues",
+    "dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ImageUtilities.d",
+    "diagnostics" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ImageUtilities.dia",
+    "index-unit-output-path" : "/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ImageUtilities.o",
+    "llvm-bc" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ImageUtilities.bc",
+    "object" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ImageUtilities.o",
+    "swift-dependencies" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ImageUtilities.swiftdeps",
+    "swiftmodule" : "/Users/alamer/Desktop/IMS/SS25/SID/Spartner/build/Spartner.build/Debug-iphoneos/Spartner.build/Objects-normal/arm64/ImageUtilities~partial.swiftmodule"
+  }
+}
