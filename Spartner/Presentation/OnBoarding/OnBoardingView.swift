@@ -51,19 +51,7 @@ struct OnBoardingView: View {
                 .ignoresSafeArea()
 
             }
-            .onAppear {
-                if hasSeenOnboarding {
-                    // Skip onboarding if already seen
-                    navigateToMainScreen()
-                }
-            }
         }
-    }
-
-    // Function to handle navigation when onboarding is finished
-    private func navigateToMainScreen() {
-        // Handle navigation to the main screen, could be a `NavigationLink` or programmatic navigation
-        // Example: `NavigationLink(destination: MainView()) { ... }`
     }
 }
 
