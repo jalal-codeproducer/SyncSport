@@ -16,7 +16,6 @@ struct RegisterView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var repeatPassword = ""
-    @State private var animateContent = false
 
     @Binding var isRegistering: Bool
 
@@ -41,15 +40,11 @@ struct RegisterView: View {
                         .foregroundColor(.white)
                 }
                 .padding(.top, 20)
-                .opacity(animateContent ? 1 : 0)
-                .scaleEffect(animateContent ? 1 : 0.8)
 
                 Text("Create Account")
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
                     .padding(.bottom, 20)
-                    .opacity(animateContent ? 1 : 0)
-                    .offset(y: animateContent ? 0 : -10)
 
                 VStack(spacing: 16) {
                     AuthField(
@@ -83,8 +78,6 @@ struct RegisterView: View {
                         isSecure: true
                     )
                 }
-                .opacity(animateContent ? 1 : 0)
-                .offset(y: animateContent ? 0 : 10)
 
                 if viewModel.errorMessage != nil {
                     Text(viewModel.errorMessage!)
@@ -164,8 +157,6 @@ struct RegisterView: View {
                     }
                 }
                 .padding(.top, 5)
-                .opacity(animateContent ? 1 : 0)
-                .offset(y: animateContent ? 0 : 20)
 
                 Button(action: {
                     if !viewModel.isLoading {
@@ -187,17 +178,11 @@ struct RegisterView: View {
                     .foregroundColor(.white)
                     .padding(.top, 10)
                 }
-                .opacity(animateContent ? 1 : 0)
             }
             .padding(.horizontal, 25)
             .padding(.bottom, 30)
         }
         .withAppBackground()
-        .onAppear {
-            withAnimation(.easeOut(duration: 0.8)) {
-                animateContent = true
-            }
-        }
         .navigationBarBackButtonHidden(true)
 
     }

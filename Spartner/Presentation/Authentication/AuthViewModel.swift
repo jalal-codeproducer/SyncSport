@@ -36,8 +36,11 @@ class AuthViewModel: ObservableObject {
                 try await repository.login(
                     email: email, password: password)
 
-                isLoggedIn = true
-
+                let user = try await repository.getCurrentUser()
+                if user != nil {
+                    sportUser = user
+                    isLoggedIn = true
+                }
             } catch {
                 errorMessage = error.localizedDescription
             }

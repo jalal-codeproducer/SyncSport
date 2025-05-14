@@ -12,7 +12,7 @@ class DependencyInjection {
     // MARK: - Singleton Instance
     static let shared = DependencyInjection()
 
-    private init() {}  // Prevent direct instantiation
+    private init() {}
 
     // MARK: - Repositories (Singleton Instances)
     private lazy var sportUserRepository: SportUserRepository =

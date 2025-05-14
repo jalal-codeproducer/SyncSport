@@ -11,7 +11,6 @@ struct ProfileView: View {
     @StateObject private var viewModel = DependencyInjection.shared
         .provideAuthViewModel()
     @State private var showingLogoutAlert = false
-    @State private var animateElements = false
 
     var body: some View {
         VStack(spacing: 30) {
@@ -42,8 +41,6 @@ struct ProfileView: View {
                     .foregroundColor(.white.opacity(0.8))
             }
             .padding(.top, 20)
-            .offset(y: animateElements ? 0 : -20)
-            .opacity(animateElements ? 1 : 0)
 
             VStack(spacing: 20) {
                 HStack {
@@ -159,8 +156,6 @@ struct ProfileView: View {
             .cornerRadius(16)
             .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
             .padding(.horizontal)
-            .offset(y: animateElements ? 0 : 20)
-            .opacity(animateElements ? 1 : 0)
 
             // Logout Button
             Button(action: {
@@ -183,18 +178,11 @@ struct ProfileView: View {
                 .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
                 .padding(.horizontal)
             }
-            .offset(y: animateElements ? 0 : 20)
-            .opacity(animateElements ? 1 : 0)
 
             Spacer()
         }
         .padding(.bottom, 30)
         .withAppBackground()
-        .onAppear {
-            withAnimation(.easeOut(duration: 0.8)) {
-                animateElements = true
-            }
-        }
         .alert(isPresented: $showingLogoutAlert) {
             Alert(
                 title: Text("Logout"),

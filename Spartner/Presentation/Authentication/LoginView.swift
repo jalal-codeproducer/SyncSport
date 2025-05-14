@@ -12,7 +12,6 @@ struct LoginView: View {
         .provideAuthViewModel()
     @State private var email = ""
     @State private var password = ""
-    @State private var animateContent = false
 
     @Binding var isRegistering: Bool
     @Binding var isAuthenticated: Bool
@@ -41,15 +40,11 @@ struct LoginView: View {
 
             }
             .padding(.top, 20)
-            .opacity(animateContent ? 1 : 0)
-            .offset(y: animateContent ? 0 : -20)
 
             Text("Welcome Back")
                 .font(.system(size: 28, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
                 .padding(.top, 20)
-                .opacity(animateContent ? 1 : 0)
-                .offset(y: animateContent ? 0 : -15)
 
             VStack(spacing: 20) {
                 AuthField(
@@ -145,18 +140,12 @@ struct LoginView: View {
             }
             .padding(.horizontal, 20)
             .padding(.top, 10)
-            .opacity(animateContent ? 1 : 0)
-            .offset(y: animateContent ? 0 : 20)
 
             Spacer()
         }
         .padding(.horizontal)
         .padding(.vertical, 20)
-        .onAppear {
-            withAnimation(.easeOut(duration: 0.8)) {
-                animateContent = true
-            }
-        }.withAppBackground()
+        .withAppBackground()
 
     }
 }

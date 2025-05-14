@@ -54,7 +54,6 @@ struct DashboardContent: View {
 // MARK: - Dashboard Header
 struct DashboardHeader: View {
     let userName: String?
-    @State private var rotation = 0.0
 
     var body: some View {
         HStack {
@@ -93,10 +92,7 @@ struct ActivityIndicator: View {
                 .trim(from: 0, to: 1)
                 .stroke(Color.white, lineWidth: 2)
                 .frame(width: 50, height: 50)
-                .onAppear {
-                    withAnimation(.linear(duration: 1.5)) {
-                    }
-                }
+              
 
             Image(systemName: "figure.run")
                 .resizable()
