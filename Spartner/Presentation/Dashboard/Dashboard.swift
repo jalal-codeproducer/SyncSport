@@ -24,6 +24,11 @@ struct Dashboard: View {
                 userViewModel: userViewModel,
                 dashboardViewModel: dashboardViewModel
             ).withAppBackground()
+                .onAppear(){
+                    Task{
+                        await dashboardViewModel.fetchChallenges1(userId: userViewModel.sportUser?.id ?? "")
+                    }
+                }
         }
     }
 }
