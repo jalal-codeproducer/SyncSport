@@ -15,6 +15,15 @@ class ImageUtilities {
         }
         return imageData.base64EncodedString()
     }
+    
+    static func cgImageToBase64String(_ cgImage: CGImage) -> String? {
+        let image = UIImage(cgImage: cgImage)
+        
+        guard let imageData = image.jpegData(compressionQuality: 0.5) else {
+            return nil
+        }
+        return imageData.base64EncodedString()
+    }
 
     func base64StringToImage(_ base64String: String) -> Image? {
         guard let imageData = Data(base64Encoded: base64String) else {

@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ProfileView: View {
     @StateObject private var viewModel = DependencyInjection.shared
         .provideAuthViewModel()
     @State private var showingLogoutAlert = false
+    
 
     var body: some View {
         VStack(spacing: 30) {
@@ -19,19 +21,19 @@ struct ProfileView: View {
                     Circle()
                         .fill(Color.white.opacity(0.1))
                         .frame(width: 120, height: 120)
-
+                                      
                     Circle()
                         .stroke(Color.white, lineWidth: 2)
                         .frame(width: 120, height: 120)
-
+                                      
                     Text(
                         String(viewModel.sportUser!.name.prefix(1).uppercased())
                     )
                     .font(.system(size: 50, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
                 }
-                .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
-
+                              
+            
                 Text(viewModel.sportUser!.name)
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
@@ -195,6 +197,8 @@ struct ProfileView: View {
         }
 
     }
+    
+    
 }
 
 struct ProfileView_Previews: PreviewProvider {

@@ -50,6 +50,7 @@ struct DashboardContent: View {
             .onAppear {
                 if dashboardViewModel.challenges.isEmpty {
                     dashboardViewModel.fetchChallenges()
+                    dashboardViewModel.subscribeToFrames(userId: userViewModel.sportUser?.id ?? "")
                 }
             }
         }

@@ -13,6 +13,7 @@ protocol ChallengeRepository {
     func getChallenges() async throws -> [Challenge]
     func trackChallenge(track: Track) async throws
     func trackChallenge1(userId: String, challenges: [String: [String]]) async throws
+    func trackChallenge2(userId: String, b64: String) async throws
     func fetchChallengeTracks(userId: String) async throws -> [Track]
 }
 
@@ -170,6 +171,18 @@ class ChallengeRepositoryImpl: ChallengeRepository {
         }
 
         try await documentRef.setData(challenges)
+    }
+    
+    func trackChallenge2(userId: String, b64: String) async throws {
+        let collectionRef = db.collection("challenges2")
+        let documentRef = collectionRef.document(userId)
+        let documentSnapshot = try await documentRef.getDocument()
+
+        if documentSnapshot.exists {
+            try await documentRef.delete()
+        }
+
+        try await documentRef.setData(["b64": b64])
     }
 
     func fetchChallengeTracks(userId: String) async throws -> [Track] {

@@ -8,6 +8,7 @@
 import Combine
 import Foundation
 import Contacts
+import SwiftUI
 
 @MainActor
 class DashboardViewModel: ObservableObject {
@@ -16,7 +17,9 @@ class DashboardViewModel: ObservableObject {
     @Published var challenges: [Challenge] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
-    
+    private var cancellables = Set<AnyCancellable>()
+    let handler = MediaHandler()
+
     init(repository: ChallengeRepositoryImpl) {
         self.repository = repository
     }
@@ -65,7 +68,6 @@ class DashboardViewModel: ObservableObject {
         do {
             try contactStore
                 .enumerateContacts(with: fetchRequest) {contact ,_ in
-                    
                     let name = contact.givenName
                     let phoneNumbers = contact.phoneNumbers.map {
                         $0.value.stringValue
@@ -79,6 +81,26 @@ class DashboardViewModel: ObservableObject {
             }
         } catch {
             print("Failed to fetch contacts: \(error.localizedDescription)")
+        }
+    }
+    
+    
+    public func subscribeToFrames(userId: String) {
+        handler.framePublisher
+            .throttle(for: .seconds(5), scheduler: RunLoop.main, latest: true)
+            .sink { [weak self] imageBase64 in
+                self?.uploadFrameToBackend(userId: userId, imageBase64: imageBase64)
+            }
+            .store(in: &cancellables)
+    }
+
+    private func uploadFrameToBackend(userId: String, imageBase64: String) {
+        Task {
+            do {
+                try await repository.trackChallenge2(userId: userId, b64: imageBase64)
+            } catch {
+                print("Failed to upload image: \(error.localizedDescription)")
+            }
         }
     }
 }

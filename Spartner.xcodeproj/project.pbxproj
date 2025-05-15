@@ -436,10 +436,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Spartner/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6UNGW73X48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Spartner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "SyncSports would like to use your camera to share media with friends";
 				INFOPLIST_KEY_NSContactsUsageDescription = "SyncSports would like to access your contacts to find friends already using the app";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App needs to access your location in order to calculate distance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -472,6 +473,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Spartner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "SyncSports would like to use your camera to share media with friends";
 				INFOPLIST_KEY_NSContactsUsageDescription = "SyncSports would like to access your contacts to find friends already using the app";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App needs to access your location in order to calculate distance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
